@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Kiwi_Maru } from 'next/font/google'
+import { Kiwi_Maru } from 'next/font/google';
 
-export const kiwiMaru = Kiwi_Maru({
-    subsets: ["latin"],
-    weight: ["400"],
-    style: "normal",
+const kiwiMaru = Kiwi_Maru({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: "normal",
 });
-export const metadata: Metadata = {
+
+export const metadata = {
   title: "彩音のてきとーなサイト",
   description: "プロフィールオンリー",
 };
