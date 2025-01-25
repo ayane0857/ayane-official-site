@@ -1,10 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react'
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
