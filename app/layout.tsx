@@ -1,5 +1,5 @@
 import { Kiwi_Maru } from "next/font/google";
-import "global.css";
+import "./globals.css";
 
 const kiwiMaru = Kiwi_Maru({
   subsets: ["latin"],
