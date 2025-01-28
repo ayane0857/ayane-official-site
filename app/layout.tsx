@@ -1,7 +1,7 @@
-import { Kiwi_Maru } from "next/font/google";
+import { Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 
-const kiwiMaru = Kiwi_Maru({
+const ZenMaru = Zen_Maru_Gothic({
   subsets: ["latin"],
   weight: ["400"],
   style: "normal",
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={kiwiMaru.className}>
+    <html lang="ja" className={ZenMaru.className}>
       <body>{children}</body>
     </html>
   );
