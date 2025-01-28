@@ -1,8 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
+import {
+  FaGithub,
+  FaTwitter,
+  FaYoutube,
+  FaDiscord,
+  FaAmazon,
+  FaCommentDots,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export default function Home() {
@@ -51,7 +57,7 @@ export default function Home() {
                 <FaDiscord className="w-5 h-5 md:w-6 md:h-6" />
               </a>
             </div>
-            <Separator className="w-full border-slate-200 border" />
+            <div className="w-full h-px bg-slate-200" />
             <div className="flex items-center space-x-2">
               <a
                 href="mailto:tailangrongyi@gmail.com"
@@ -61,6 +67,23 @@ export default function Home() {
                 <span className="break-all">tailangrongyi@gmail.com</span>
               </a>
             </div>
+            <div className="w-full h-px bg-slate-200" />
+            <div className="flex flex-col space-y-2 w-full items-center">
+              <a
+                href="https://www.amazon.jp/hz/wishlist/ls/XXXXXXXXXX"
+                className="flex items-center space-x-2 text-sm md:text-base hover:opacity-80"
+              >
+                <FaAmazon className="w-4 h-4 md:w-5 md:h-5" />
+                <span>ほしい物リスト</span>
+              </a>
+              <a
+                href="https://marshmallow-qa.com/ayane0857"
+                className="flex items-center space-x-2 text-sm md:text-base hover:opacity-80"
+              >
+                <FaCommentDots className="w-4 h-4 md:w-5 md:h-5" />
+                <span>マシュマロ</span>
+              </a>
+            </div>
           </div>
         </Card>
       </div>
@@ -68,11 +91,13 @@ export default function Home() {
       <div className="w-full md:w-[calc(100%-16rem)] lg:w-[calc(100%-18rem)] flex items-center justify-start p-4 md:p-12">
         <div className="max-w-2xl">
           <p className="text-lg md:text-xl leading-relaxed">
-            そこらへんにいる一般階級レッド
+            そこらへんにいる一般階級インフラレッド
             <br />
             動画編集やプログラミングとか暇があったらやってる
             <br />
-            UniPro所属してる
+            UniProに所属してるよ
+            <br />
+            ぬっこでもある
           </p>
           <div className="h-2"></div>
           <div className="space-y-6">
@@ -91,7 +116,7 @@ export default function Home() {
                     </a>
                     を開発中
                   </li>
-                  </ul>
+                </ul>
               </div>
             </div>
             <br />
