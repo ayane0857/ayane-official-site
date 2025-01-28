@@ -70,15 +70,19 @@ export default function Home() {
             <div className="w-full h-px bg-slate-200" />
             <div className="flex flex-col space-y-2 w-full items-center">
               <a
-                href="https://www.amazon.jp/hz/wishlist/ls/XXXXXXXXXX"
+                href="https://www.amazon.co.jp/hz/wishlist/ls/3PD4GD3W2M8AT"
                 className="flex items-center space-x-2 text-sm md:text-base hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaAmazon className="w-4 h-4 md:w-5 md:h-5" />
                 <span>ほしい物リスト</span>
               </a>
               <a
-                href="https://marshmallow-qa.com/ayane0857"
+                href="https://marshmallow-qa.com/t8mh63w5fpziayd"
                 className="flex items-center space-x-2 text-sm md:text-base hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaCommentDots className="w-4 h-4 md:w-5 md:h-5" />
                 <span>マシュマロ</span>
