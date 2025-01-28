@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 import {
   FaGithub,
   FaTwitter,
@@ -10,7 +11,21 @@ import {
   FaCommentDots,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+interface NewsItem {
+  title: string;
+  date: string;
+  link: string;
+  description: string;
+}
 
+const newsItems: NewsItem[] = [
+  {
+    title: "お知らせ作ってみた",
+    date: "01/28/2025",
+    link: "/news/1",
+    description: "見えてるかな？",
+  },
+];
 export default function Home() {
   return (
     <div className="flex flex-col md:flex-row min-h-screen w-full bg-[#F9F6F7] p-4 md:p-8">
@@ -57,7 +72,6 @@ export default function Home() {
                 <FaDiscord className="w-5 h-5 md:w-6 md:h-6" />
               </a>
             </div>
-            <div className="w-full h-px bg-slate-200" />
             <div className="flex items-center space-x-2">
               <a
                 href="mailto:tailangrongyi@gmail.com"
@@ -67,6 +81,20 @@ export default function Home() {
                 <span className="break-all">tailangrongyi@gmail.com</span>
               </a>
             </div>
+            <div className="w-full h-px bg-slate-200" />
+            <p className="text-ml leading-relaxed">
+              そこらへんにいる一般階級インフラレッドのぬっこ
+              <br />
+              動画編集やプログラミングとか暇があったらやってる
+              <br />
+              <a
+                href="https://ayano.uniproject.jp"
+                className="text-blue-600 hover:underline"
+              >
+                彩乃 Bot
+              </a>
+              を開発中
+            </p>
             <div className="w-full h-px bg-slate-200" />
             <div className="flex flex-col space-y-2 w-full items-center">
               <a
@@ -93,37 +121,28 @@ export default function Home() {
       </div>
 
       <div className="w-full md:w-[calc(100%-16rem)] lg:w-[calc(100%-18rem)] flex items-center justify-start p-4 md:p-12">
-        <div className="max-w-2xl">
-          <p className="text-lg md:text-xl leading-relaxed">
-            そこらへんにいる一般階級インフラレッド
-            <br />
-            動画編集やプログラミングとか暇があったらやってる
-            <br />
-            UniProに所属してるよ
-            <br />
-            ぬっこでもある
-          </p>
-          <div className="h-2"></div>
+        <div className="max-w-2xl w-full">
+          <h1 className="text-3xl font-bold mb-6 pb-2 border-b">
+            最新のお知らせ
+          </h1>
           <div className="space-y-6">
-            <div className="space-y-4">
-              <div className="border-l-4 border-gray-200 pl-4">
-                <h3 className="text-xl font-medium text-gray-900 mb-2">
-                  DiscordBot開発中
-                </h3>
-                <ul className="space-y-1">
-                  <li className="text-gray-700">
-                    <a
-                      href="https://ayano.uniproject.jp"
-                      className="text-blue-600 hover:underline"
-                    >
-                      彩乃 Bot
-                    </a>
-                    を開発中
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <br />
+            {newsItems.map((item, index) => (
+              <Card key={index} className="border-t border-b">
+                <Link href={item.link}>
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-semibold">
+                      {item.title}
+                    </CardTitle>
+                    <span className="text-sm text-muted-foreground">
+                      {item.date}
+                    </span>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Link>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
