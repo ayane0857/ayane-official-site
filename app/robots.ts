@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://ayane.uniproject.jp/sitemap.xml',
+    sitemap: 'https://ayane0857.net/sitemap.xml',
   }
 }

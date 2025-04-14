@@ -1,32 +1,9 @@
-import React from "react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Link from "next/link";
-import {
-  FaGithub,
-  FaTwitter,
-  FaYoutube,
-  FaDiscord,
-  FaAmazon,
-  FaCommentDots,
-} from "react-icons/fa";
+import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-interface NewsItem {
-  title: string;
-  date: string;
-  link: string;
-  description: string;
-}
 
-const newsItems: NewsItem[] = [
-  {
-    title: "お知らせ作ってみた",
-    date: "01/28/2025",
-    link: "/news/1",
-    description: "見えてるかな？",
-  },
-];
-export default function Home() {
+export default async function Home() {
   return (
     <div className="flex flex-col md:flex-row min-h-screen w-full bg-[#F9F6F7] p-4 md:p-8">
       <div className="w-full md:w-64 lg:w-72 flex items-center justify-center md:justify-start mb-6 md:mb-0">
@@ -36,9 +13,9 @@ export default function Home() {
               <Image
                 src="/icon.png"
                 alt="アイコン"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-full"
+                width={128}
+                height={128}
+                className="rounded-full object-cover"
               />
             </div>
             <h2 className="text-xl md:text-2xl font-bold">彩音</h2>
@@ -74,46 +51,43 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-2">
               <a
-                href="mailto:tailangrongyi@gmail.com"
+                href="mailto:info@ayane0857.net"
                 className="flex items-center space-x-1 text-sm md:text-base hover:opacity-80"
               >
                 <MdEmail className="w-4 h-4 md:w-5 md:h-5" />
-                <span className="break-all">tailangrongyi@gmail.com</span>
+                <span className="break-all">info@ayane0857.net</span>
               </a>
             </div>
-            <div className="w-full h-px bg-slate-200" />
             <p className="text-ml leading-relaxed">
               そこらへんにいる一般階級インフラレッドのぬっこ
               <br />
               動画編集やプログラミングとか暇があったらやってる
-              <br />
-              <a
-                href="https://ayano.uniproject.jp"
-                className="text-blue-600 hover:underline"
-              >
-                彩乃 Bot
-              </a>
-              を開発中
             </p>
-            <div className="w-full h-px bg-slate-200" />
             <div className="flex flex-col space-y-2 w-full items-center">
+              <p className="text-lg">相互リンク</p>
               <a
-                href="https://www.amazon.co.jp/hz/wishlist/ls/3PD4GD3W2M8AT"
-                className="flex items-center space-x-2 text-sm md:text-base hover:opacity-80"
+                href="https://ilovejunkpcnico.netlify.app/"
+                className="flex items-center space-x-2 text-base hover:opacity-80"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaAmazon className="w-4 h-4 md:w-5 md:h-5" />
-                <span>ほしい物リスト</span>
+                <span>Nicoさん</span>
               </a>
               <a
-                href="https://marshmallow-qa.com/t8mh63w5fpziayd"
-                className="flex items-center space-x-2 text-sm md:text-base hover:opacity-80"
+                href="https://mellllonsoda.github.io/mellllonsoda-s-page/"
+                className="flex items-center space-x-2 text-base hover:opacity-80"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaCommentDots className="w-4 h-4 md:w-5 md:h-5" />
-                <span>マシュマロ</span>
+                <span>めろんそ〜ださん</span>
+              </a>
+              <a
+                href="https://www.kaerubasyo.com/"
+                className="flex items-center space-x-2 text-base hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>kaeruさん</span>
               </a>
             </div>
           </div>
@@ -122,27 +96,16 @@ export default function Home() {
 
       <div className="w-full md:w-[calc(100%-16rem)] lg:w-[calc(100%-18rem)] flex items-center justify-start p-4 md:p-12">
         <div className="max-w-2xl w-full">
-          <h1 className="text-3xl font-bold mb-6 pb-2 border-b">
-            最新のお知らせ
-          </h1>
+          <h1 className="text-3xl font-bold mb-6 pb-2 border-b">最新のお知らせ</h1>
           <div className="space-y-6">
-            {newsItems.map((item, index) => (
-              <Card key={index} className="border-t border-b">
-                <Link href={item.link}>
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-semibold">
-                      {item.title}
-                    </CardTitle>
-                    <span className="text-sm text-muted-foreground">
-                      {item.date}
-                    </span>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </CardContent>
-                </Link>
-              </Card>
-            ))}
+            <Card className="border-t border-b">
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold">なし</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">データが取得できません</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ayane-official-site
+spec:
+  selector:
+    matchLabels:
+      app: ayane-official-site
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ayane-official-site
+    spec:
+      containers:
+        - name: app
+          image: registry.uniproject.jp/ayane/ayane-official-site:0.1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              name: default-port
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ayane-official-site
+spec:
+  selector:
+    app: ayane-official-site
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress
+  labels:
+    name: app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: ayane0857.net
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: ayane-official-site
+                port:
+                  number: 80
