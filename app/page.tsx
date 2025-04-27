@@ -73,7 +73,7 @@ export default async function Home() {
               </div>
             </div>
             <p className="text-ml leading-relaxed">
-              そこらへんにいる一般階級インフラレッドのぬっこです
+              そこらへんにいる階級インフラレッドのぬっこ
               <br />
               動画投稿してるけど、最近あんまりやってない
               <br />
