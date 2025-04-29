@@ -45,7 +45,7 @@ export default async function Home() {
                     <FaYoutube className="w-5 h-5 md:w-6 md:h-6" />
                   </a>
                   <a
-                    href="https://discord.gg/qyTSUJFctN"
+                    href="https://discord.gg/mB3AXgtVEY"
                     aria-label="Discord"
                     className="hover:opacity-80"
                   >
