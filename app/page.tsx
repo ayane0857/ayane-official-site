@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { MdGroups } from "react-icons/md";
+import { MdEmail, MdGroups, MdMonitorHeart } from "react-icons/md";
 
 export default async function Home() {
   return (
@@ -11,12 +10,12 @@ export default async function Home() {
         <Card className="w-full h-auto flex flex-col items-center bg-[#D58F99] shadow-lg border-0 p-4">
           <div className="flex flex-col items-center w-full h-full space-y-4">
             <div className="flex justify-between items-center">
-              <div className="w-32 h-32 relative">
+              <div className="w-40 h-40 relative">
                 <Image
                   src="/icon.png"
                   alt="アイコン"
-                  width={128}
-                  height={128}
+                  width={192}
+                  height={192}
                   className="object-cover"
                 />
               </div>
@@ -68,6 +67,15 @@ export default async function Home() {
                   >
                     <MdGroups className="w-4 h-4 md:w-5 md:h-5" />
                     <span className="break-all">UniProject</span>
+                  </a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <a
+                    href="https://ayane.instatus.com/"
+                    className="flex items-center space-x-1 text-sm md:text-base hover:opacity-80"
+                  >
+                    <MdMonitorHeart className="w-4 h-4 md:w-5 md:h-5" />
+                    <span className="break-all">Instatus</span>
                   </a>
                 </div>
               </div>
