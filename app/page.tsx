@@ -20,7 +20,7 @@ export default async function Home() {
                 />
               </div>
               <div className="">
-                <h2 className="text-xl md:text-2xl font-bold">彩音</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">彩音</h2>
                 <div className="flex space-x-4 my-2">
                   <a
                     href="https://github.com/ayane0857"
