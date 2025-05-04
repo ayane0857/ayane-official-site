@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: ayane-official-site
 spec:
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: ayane-official-site
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: registry.uniproject.jp/ayane/ayane-official-site:1.2.1
+          image: registry.uniproject.jp/ayane/ayane-official-site:1.2.2
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
