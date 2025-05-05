@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+export const metadata = {
+  title: "利用規約",
+  description: "利用規約",
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -21,7 +26,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="px-5 py-10">
         <div className="mx-auto max-w-5xl rounded-lg bg-[#f9f6f7] border-2 p-10 min-h-[600px]">
-          <div className="text-black mb-2 pl-2 text-lg" lang="en">
+          <div className="text-black mb-2 text-xs lg:text-lg" lang="en">
             /<Link href={"/"}>home</Link>/terms-of-service
           </div>
 
@@ -29,14 +34,14 @@ export default function Home() {
             利用規約
           </h2>
 
-          <div className="text-black pl-8">
+          <div className="text-black pl-4 text-xs md:text-sm lg:text-base space-y-4">
             <p>
               この利用規約（以下、「本規約」といいます。）は、
               <span lang="en">Ayane Tech Lab</span>
               （以下、「弊団体」といいます。）がこのウェブサイト上で提供するサービス（以下、「本サービス」といいます。）の利用条件を定めるものです。本サービスを利用する者（以下、「ユーザー」といいます。）には、本規約に従って、本サービスをご利用いただきます。
             </p>
 
-            <p className="text-xl">第 1 条（適用）</p>
+            <p className="text-lg md:text-xl ">第 1 条（適用）</p>
             <p>
               本規約は、ユーザーと弊団体との間の本サービスの利用に関わる一切の関係に適用されるものとします。
               <br />
@@ -45,7 +50,7 @@ export default function Home() {
               本規約の規定が前条の個別規定の規定と矛盾する場合には、個別規定において特段の定めなき限り、個別規定の規定が優先されるものとします。
             </p>
 
-            <p className="text-xl">第 2 条（利用登録）</p>
+            <p className="text-lg md:text-xl ">第 2 条（利用登録）</p>
             <p>
               本サービスにおいては、登録希望者が本規約に同意の上、弊団体の定める方法によって利用登録を申請し、弊団体がこれを承認することによって、利用登録が完了するものとします。
               <br />
@@ -57,7 +62,7 @@ export default function Home() {
               <li>その他、弊団体が利用登録を適当でないと判断した場合</li>
             </ul>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">3</span> 条（ユーザー <span lang="en">ID</span>
               およびパスワードの管理）
             </p>
@@ -82,7 +87,7 @@ export default function Home() {
               及びパスワードが第三者によって使用されたことによって生じた損害は、弊団体は一切の責任を負わないものとします。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">4</span> 条（禁止事項）
             </p>
             <p>
@@ -115,7 +120,7 @@ export default function Home() {
               <li>その他、本サービスの運営上不適切と判断する行為</li>
             </ul>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">5</span> 条（本サービスの提供の停止等）
             </p>
             <p>
@@ -135,7 +140,7 @@ export default function Home() {
               弊団体は、本サービスの提供の停止または中断により、ユーザーまたは第三者が被ったいかなる不利益または損害についても、一切の責任を負わないものとします。ただし、定期メンテナンスや更新の場合は、原則として事前に告知します。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">6</span> 条（利用制限および登録抹消）
             </p>
             <p>
@@ -152,14 +157,14 @@ export default function Home() {
               弊団体は、本条に基づき弊団体が行った行為によりユーザーに生じた損害について、一切の責任を負いません。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">7</span> 条（退会）
             </p>
             <p>
               ユーザーは、弊団体の定める退会手続により、本サービスから退会できるものとします。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">8</span> 条（保証の否認および免責事項）
             </p>
             <p>
@@ -170,7 +175,7 @@ export default function Home() {
               弊団体は、本サービスに関して、ユーザーと他のユーザーまたは第三者との間において生じた取引、連絡または紛争等について一切責任を負いません。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">9</span> 条（サービス内容の変更等）
             </p>
             <p>
@@ -179,7 +184,7 @@ export default function Home() {
             <p>
               弊団体は、本サービスの内容の変更、追加または廃止により、ユーザーに生じた損害について、一切の責任を負いません。
             </p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">10</span> 条（利用規約の変更）
             </p>
             <p>
@@ -195,21 +200,21 @@ export default function Home() {
               弊団体はユーザーに対し、前項による本規約の変更にあたり、事前に、本規約を変更する旨及び変更後の本規約の内容並びにその効力発生時期を通知します。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">11</span> 条（個人情報の取扱い）
             </p>
             <p>
               弊団体は、本サービスの利用によって取得する個人情報については、弊団体「プライバシーポリシー」に従い適切に取り扱うものとします。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">12</span> 条（通知または連絡）
             </p>
             <p>
               ユーザーと弊団体との間の通知または連絡は、弊団体の定める方法によって行うものとします。弊団体は、ユーザーから、弊団体が別途定める方式に従った変更届け出がない限り、現在登録されている連絡先が有効なものとみなして当該連絡先へ通知または連絡を行い、これらは、発信時にユーザーへ到達したものとみなします。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">13</span> 条（準拠法・裁判管轄）
             </p>
             <p>
@@ -218,13 +223,12 @@ export default function Home() {
               本サービスに関して紛争が生じた場合には、福岡地方裁判所を第一審の専属的合意管轄裁判所とします。
             </p>
 
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">14</span> 条（分離条項）
             </p>
             <p>
               本契約のいずれかの条項が違法、無効または執行不可能と司法当局に判断されても、本契約のその他の条項または規定の適法性、有効性または執行可能性には何ら影響を及ぼさない。
             </p>
-            <br />
             <p>以上</p>
           </div>
         </div>

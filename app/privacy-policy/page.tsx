@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+export const metadata = {
+  title: "プライバシーポリシー",
+  description: "プライバシーポリシー",
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -21,7 +26,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="px-5 py-10">
         <div className="mx-auto max-w-5xl rounded-lg bg-[#f9f6f7] border-2 p-10 min-h-[600px]">
-          <div className="text-black mb-2 pl-2 text-lg" lang="en">
+          <div className="text-black mb-2 pl-2 text-xs lg:text-lg" lang="en">
             /<Link href={"/"}>home</Link>/privacy-policy
           </div>
 
@@ -29,18 +34,18 @@ export default function Home() {
             プライバシーポリシー
           </h2>
 
-          <div className="text-black pl-8">
+          <div className="text-black pl-4 text-xs md:text-sm lg:text-base space-y-4">
             <p>
               <span lang="en">Ayane Tech Lab</span>
               （以下、「弊団体」といいます。）は、本ウェブサイト上で提供するサービス（以下、「本サービス」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。
             </p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">1</span> 条（個人情報）
             </p>
             <p>
               「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
             </p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">2</span> 条（個人情報の収集方法）
             </p>
             <p>
@@ -48,7 +53,7 @@ export default function Home() {
               <br />
               また、ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を、弊団体の提携先（情報提供元、広告主、広告配信先などを含みます。以下、｢提携先｣といいます。）などから収集することがあります。
             </p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">3</span> 条（個人情報を収集・利用する目的）
             </p>
             <p>弊団体が個人情報を収集・利用する目的は、以下のとおりです。</p>
@@ -69,7 +74,7 @@ export default function Home() {
               </li>
               <li>上記の利用目的に付随する目的</li>
             </ul>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">4</span> 条（利用目的の変更）
             </p>
             <p>
@@ -77,7 +82,7 @@ export default function Home() {
               <br />
               利用目的の変更を行った場合には、変更後の目的について、弊団体所定の方法により、ユーザーに通知し、または本ウェブサイト上に公表するものとします。
             </p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">5</span> 条（個人情報の第三者提供）
             </p>
             <p>
@@ -113,7 +118,7 @@ export default function Home() {
                 個人情報を特定の者との間で共同して利用する場合であって、その旨並びに共同して利用される個人情報の項目、共同して利用する者の範囲、利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について、あらかじめ本人に通知し、または本人が容易に知り得る状態に置いた場合
               </li>
             </ul>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">6</span> 条（個人情報の開示）
             </p>
             <p>
@@ -133,7 +138,7 @@ export default function Home() {
             <p>
               前項の定めにかかわらず、履歴情報および特性情報などの個人情報以外の情報については、原則として開示いたしません。
             </p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">7</span> 条（個人情報の訂正および削除）
             </p>
             <p>
@@ -143,7 +148,7 @@ export default function Home() {
               <br />
               弊団体は、前項の規定に基づき訂正等を行った場合、または訂正等を行わない旨の決定をしたときは遅滞なく、これをユーザーに通知します。
             </p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">8</span> 条（個人情報の利用停止等）
             </p>
             <p>
@@ -157,7 +162,7 @@ export default function Home() {
               前 <span lang="en">2</span>{" "}
               項にかかわらず、利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって、ユーザーの権利利益を保護するために必要なこれに代わるべき措置をとれる場合は、この代替策を講じるものとします。
             </p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第 <span lang="en">9</span> 条（クッキーの使用について）
             </p>
             <p className="text-lg">
@@ -227,7 +232,7 @@ export default function Home() {
             </p>
             <p>送信先での利用目的</p>
             <p>同上</p>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl ">
               第<span lang="en"> 10 </span>条（プライバシーポリシーの変更）
             </p>
             <p>
@@ -235,7 +240,7 @@ export default function Home() {
               <br />
               弊団体が別途定める場合を除いて、変更後のプライバシーポリシーは、本ウェブサイトに掲載したときから効力を生じるものとします。
             </p>
-            <p className="text-xl">第 11 条（お問い合わせ窓口）</p>
+            <p className="text-lg md:text-xl ">第 11 条（お問い合わせ窓口）</p>
             <p>
               本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。
             </p>
