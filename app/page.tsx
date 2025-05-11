@@ -123,6 +123,14 @@ export default async function Home() {
                 >
                   <span>kaeruさん</span>
                 </a>
+                <a
+                  href="https://www.yuito-it.jp/"
+                  className="flex items-center space-x-2 text-base hover:opacity-80"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>ゆいとさん</span>
+                </a>
               </div>
             </div>
           </Card>
