@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdGroups, MdMonitorHeart } from "react-icons/md";
 
-export default async function Home() {
+export default function Home() {
   return (
     <div className="bg-[#F9F6F7]">
       <div className="flex flex-col md:flex-row min-h-screen w-full p-4 md:p-8">
