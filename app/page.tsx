@@ -19,6 +19,7 @@ export default function Home() {
                     width={192}
                     height={192}
                     className="object-cover"
+                    priority
                   />
                 </div>
                 <div>
