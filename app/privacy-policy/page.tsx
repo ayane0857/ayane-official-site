@@ -18,6 +18,7 @@ export default function Home() {
               width={192}
               height={192}
               className="object-cover"
+              priority
             />
           </div>
           <h1 className="ml-4 text-lg font-normal text-black">彩音サイト</h1>
