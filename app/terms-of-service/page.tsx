@@ -8,7 +8,6 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <Link href={"/"}>
         <header className="flex items-center p-5">
           <div className="w-[60px] h-[60px]">
@@ -18,12 +17,12 @@ export default function Home() {
               width={192}
               height={192}
               className="object-cover"
+              priority
             />
           </div>
           <h1 className="ml-4 text-lg font-normal text-black">彩音サイト</h1>
         </header>
       </Link>
-      {/* Main Content */}
       <main className="px-5 py-10">
         <div className="mx-auto max-w-5xl rounded-lg bg-[#f9f6f7] border-2 p-10 min-h-[600px]">
           <div className="text-black mb-2 text-xs lg:text-lg" lang="en">

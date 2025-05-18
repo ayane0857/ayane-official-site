@@ -8,7 +8,6 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <Link href={"/"}>
         <header className="flex items-center p-5">
           <div className="w-[60px] h-[60px]">
@@ -18,12 +17,12 @@ export default function Home() {
               width={192}
               height={192}
               className="object-cover"
+              priority
             />
           </div>
           <h1 className="ml-4 text-lg font-normal text-black">彩音サイト</h1>
         </header>
       </Link>
-      {/* Main Content */}
       <main className="px-5 py-10">
         <div className="mx-auto max-w-5xl rounded-lg bg-[#f9f6f7] border-2 p-10 min-h-[600px]">
           <div className="text-black mb-2 pl-2 text-xs lg:text-lg" lang="en">
@@ -159,14 +158,13 @@ export default function Home() {
               弊団体は、前項の規定に基づき利用停止等を行った場合、または利用停止等を行わない旨の決定をしたときは、遅滞なく、これをユーザーに通知します。
             </p>
             <p>
-              前 <span lang="en">2</span>{" "}
+              前 <span lang="en">2</span>
               項にかかわらず、利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって、ユーザーの権利利益を保護するために必要なこれに代わるべき措置をとれる場合は、この代替策を講じるものとします。
             </p>
             <p className="text-lg md:text-xl ">
               第 <span lang="en">9</span> 条（クッキーの使用について）
             </p>
             <p className="text-lg">
-              {" "}
               <span lang="en">1</span>．クッキーについて
             </p>
             <p>
@@ -218,7 +216,7 @@ export default function Home() {
               </li>
             </ul>
             <p>
-              詳細は <span lang="en">Google</span>{" "}
+              詳細は <span lang="en">Google</span>
               のウェブサイトをご参照ください。
             </p>
             <p>
@@ -226,9 +224,9 @@ export default function Home() {
               弊団体での利用目的
             </p>
             <p>
-              利用者による閲覧の傾向や履歴の分析のため。 詳細は{" "}
+              利用者による閲覧の傾向や履歴の分析のため。 詳細は
               <span lang="en">Google</span>
-              のウェブサイトをご参照ください。{" "}
+              のウェブサイトをご参照ください。
             </p>
             <p>送信先での利用目的</p>
             <p>同上</p>

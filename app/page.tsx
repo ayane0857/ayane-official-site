@@ -157,7 +157,8 @@ export default function Home() {
                     <p className="text-gray-600 dark:text-gray-400">
                       総合型開発中
                       <span lang="en">Bot</span>
-                      です。 ギャンブルできます（）
+                      です。 <br />
+                      様々なことが可能ですが、まだ開発中のため、機能は少ないです。
                     </p>
                     <div className="mt-4 flex items-center text-sm text-primary">
                       <span>詳細を見る</span>
@@ -179,25 +180,6 @@ export default function Home() {
                   </div>
                 </div>
               </a>
-              <div className="border border-dashed rounded-lg overflow-hidden p-6 flex flex-col items-center justify-center h-full bg-gray-50 dark:bg-gray-800/50">
-                <svg
-                  className="w-12 h-12 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                  ></path>
-                </svg>
-                <p className="mt-4 text-gray-500 dark:text-gray-400 text-center">
-                  近日公開予定の新サービスなんてないです
-                </p>
-              </div>
             </div>
           </div>
         </div>
