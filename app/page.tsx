@@ -21,44 +21,44 @@ export default async function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="">
-                  <h2 className="text-2xl md:text-3xl font-bold">彩音</h2>
+                <div>
+                  <h2 className="text-3xl font-bold">彩音</h2>
                   <div className="flex space-x-4 my-2">
                     <a
                       href="https://github.com/ayane0857"
                       aria-label="GitHub"
                       className="hover:opacity-80"
                     >
-                      <FaGithub className="w-5 h-5 md:w-6 md:h-6" />
+                      <FaGithub className="w-6 h-6" />
                     </a>
                     <a
                       href="https://x.com/ayane0857_"
                       aria-label="Twitter"
                       className="hover:opacity-80"
                     >
-                      <FaTwitter className="w-5 h-5 md:w-6 md:h-6" />
+                      <FaTwitter className="w-6 h-6" />
                     </a>
                     <a
                       href="https://www.youtube.com/@ayane0857"
                       aria-label="YouTube"
                       className="hover:opacity-80"
                     >
-                      <FaYoutube className="w-5 h-5 md:w-6 md:h-6" />
+                      <FaYoutube className="w-6 h-6" />
                     </a>
                     <a
                       href="https://discord.gg/mB3AXgtVEY"
                       aria-label="Discord"
                       className="hover:opacity-80"
                     >
-                      <FaDiscord className="w-5 h-5 md:w-6 md:h-6" />
+                      <FaDiscord className="w-6 h-6" />
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
                     <a
                       href="mailto:info@ayane0857.net"
-                      className="flex items-center space-x-1 text-sm md:text-base hover:opacity-80"
+                      className="flex items-center space-x-1 hover:opacity-80 text-lg md:text-base"
                     >
-                      <MdEmail className="w-4 h-4 md:w-5 md:h-5" />
+                      <MdEmail className="w-5 h-5" />
                       <span className="break-all" lang="en">
                         info@ayane0857.net
                       </span>
@@ -67,9 +67,9 @@ export default async function Home() {
                   <div className="flex items-center space-x-2">
                     <a
                       href="https://www.uniproject.jp/"
-                      className="flex items-center space-x-1 text-sm md:text-base hover:opacity-80"
+                      className="flex items-center space-x-1 hover:opacity-80 text-lg md:text-base"
                     >
-                      <MdGroups className="w-4 h-4 md:w-5 md:h-5" />
+                      <MdGroups className="w-5 h-5" />
                       <span className="break-all" lang="en">
                         UniProject
                       </span>
@@ -78,9 +78,9 @@ export default async function Home() {
                   <div className="flex items-center space-x-2">
                     <a
                       href="https://ayane.instatus.com/"
-                      className="flex items-center space-x-1 text-sm md:text-base hover:opacity-80"
+                      className="flex items-center space-x-1 hover:opacity-80 text-lg md:text-base"
                     >
-                      <MdMonitorHeart className="w-4 h-4 md:w-5 md:h-5" />
+                      <MdMonitorHeart className="w-5 h-5" />
                       <span className="break-all" lang="en">
                         Instatus
                       </span>
@@ -98,7 +98,7 @@ export default async function Home() {
                 <span lang="en">UniProject</span>に所属している
               </p>
               <div className="flex flex-col space-y-2 w-full items-center">
-                <p className="text-lg">相互リンク</p>
+                <p className="text-2xl">相互リンク</p>
                 <a
                   href="https://ilovejunkpcnico.netlify.app/"
                   className="flex items-center space-x-2 text-base hover:opacity-80"
