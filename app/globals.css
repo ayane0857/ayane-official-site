@@ -74,6 +74,11 @@ body {
   font-weight: 400;
 }
 
+[lang="en-small"] {
+  font-family: var(--font-en), sans-serif;
+  font-weight: 200;
+}
+
 [lang="en"] {
   font-family: var(--font-en), sans-serif;
   font-weight: 300;

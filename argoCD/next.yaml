@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: registry.uniproject.jp/ayane/ayane-official-site:1.3.9
+          image: registry.uniproject.jp/ayane/ayane-official-site:1.4.0
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

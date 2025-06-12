@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
+import { Skills } from "@/components/ui/skills";
+import { ReciprocalLink } from "@/components/ui/reciprocal_link";
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdGroups, MdMonitorHeart } from "react-icons/md";
 
@@ -8,7 +10,7 @@ export default function Home() {
   return (
     <div className="bg-[#F9F6F7]">
       <div className="flex flex-col md:flex-row min-h-screen w-full p-4 md:p-8">
-        <div className="w-full md:w-80 lg:w-96 flex items-center justify-center md:justify-start mb-6 md:mb-0">
+        <div className="w-full md:w-80 lg:w-96 flex items-center justify-center md:justify-start mb-6 md:mb-0 md:fixed md:top-1/2 md:-translate-y-1/2 md:h-screen md:overflow-y-auto">
           <Card className="w-full h-auto flex flex-col items-center bg-[#D58F99] shadow-lg border-0 p-4">
             <div className="flex flex-col items-center w-full h-full space-y-4">
               <div className="flex justify-between items-center">
@@ -57,7 +59,7 @@ export default function Home() {
                   <div className="flex items-center space-x-2">
                     <a
                       href="mailto:info@ayane0857.net"
-                      className="flex items-center space-x-1 hover:opacity-80 text-lg md:text-base"
+                      className="flex items-center space-x-1 hover:opacity-80 text-base"
                     >
                       <MdEmail className="w-5 h-5" />
                       <span className="break-all" lang="en">
@@ -68,7 +70,7 @@ export default function Home() {
                   <div className="flex items-center space-x-2">
                     <a
                       href="https://www.uniproject.jp/"
-                      className="flex items-center space-x-1 hover:opacity-80 text-lg md:text-base"
+                      className="flex items-center space-x-1 hover:opacity-80 text-base"
                     >
                       <MdGroups className="w-5 h-5" />
                       <span className="break-all" lang="en">
@@ -79,7 +81,7 @@ export default function Home() {
                   <div className="flex items-center space-x-2">
                     <a
                       href="https://ayane.instatus.com/"
-                      className="flex items-center space-x-1 hover:opacity-80 text-lg md:text-base"
+                      className="flex items-center space-x-1 hover:opacity-80 text-base"
                     >
                       <MdMonitorHeart className="w-5 h-5" />
                       <span className="break-all" lang="en">
@@ -89,61 +91,55 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <p className="text-ml leading-relaxed">
-                そこらへんにいる階級インフラレッドのぬっこ
+              <p className="text-base leading-relaxed">
+                <span lang="en">2010</span>
+                年製の中学生プログラマー兼動画編集者
+                <br />
+                そこらへんにいる階級インフラレッドな人
                 <br />
                 動画投稿してるけど、最近あんまりやってない
                 <br />
-                プログラミングとか暇があったらやってる
+                プログラミングとかやる気があるとやってます
                 <br />
-                <span lang="en">UniProject</span>に所属している
+                めちゃんこ初心者なので手加減してほしいなぁ
+                <br />
+                <span lang="en">UniProject</span>
+                に所属している(トラックナンバーでもある)
+                <br />
+                <span lang="en">Disnana</span>にもたまに顔を出している
+                <br />
               </p>
-              <div className="flex flex-col space-y-2 w-full items-center">
-                <p className="text-2xl">相互リンク</p>
-                <a
-                  href="https://ilovejunkpcnico.netlify.app/"
-                  className="flex items-center space-x-2 text-base hover:opacity-80"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Nicoさん</span>
-                </a>
-                <a
-                  href="https://mellllonsoda.github.io/mellllonsoda-s-page/"
-                  className="flex items-center space-x-2 text-base hover:opacity-80"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>めろんそ〜ださん</span>
-                </a>
-                <a
-                  href="https://www.kaerubasyo.com/"
-                  className="flex items-center space-x-2 text-base hover:opacity-80"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>kaeruさん</span>
-                </a>
-                <a
-                  href="https://www.yuito-it.jp/"
-                  className="flex items-center space-x-2 text-base hover:opacity-80"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>ゆいとさん</span>
-                </a>
-              </div>
             </div>
           </Card>
         </div>
 
-        <div className="w-full md:w-[calc(100%-20rem)] lg:w-[calc(100%-24rem)] flex items-center justify-start p-4 md:p-12">
+        <div className="w-full md:w-[calc(100%-20rem)] lg:w-[calc(100%-24rem)] flex items-center justify-start p-4 md:p-12 md:ml-80 lg:ml-96">
           <div className="max-w-4xl w-full mx-auto">
             <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-              <span className="text-primary">運営サービス一覧</span>
+              <span className="text-primary" lang="en-small">
+                Skills
+              </span>
             </h1>
-
-            <div className="flex flex-col gap-6">
+            <div className="grid grid-cols-2 mb-8 pb-3 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+              <Skills icon="SiJavascript" text="JavaScript" />
+              <Skills icon="SiNextdotjs" text="Next.js" />
+              <Skills icon="SiNodedotjs" text="Node.js" />
+              <Skills icon="SiPython" text="Python" />
+              <Skills icon="SiTypescript" text="TypeScript" />
+              <Skills icon="SiTailwindcss" text="Tailwind CSS" />
+              <Skills icon="SiPostgresql" text="PostgreSQL" />
+              <Skills icon="SiKubernetes" text="Kubernetes" />
+              <Skills icon="SiGit" text="Git" />
+              <Skills icon="SiArgo" text="ArgoCD" />
+              <Skills icon="SiLinux" text="Linux" />
+              <Skills icon="SiAirplayvideo" text="YMM4" />
+            </div>
+            <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
+              <span className="text-primary" lang="en-small">
+                Provided Services
+              </span>
+            </h1>
+            <div className="flex flex-col mb-8 pb-3 gap-6">
               <a
                 href="https://ayano.ayane0857.net"
                 className="block group transition-all duration-300 hover:scale-105"
@@ -180,6 +176,25 @@ export default function Home() {
                   </div>
                 </div>
               </a>
+            </div>
+            <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
+              <span className="text-primary" lang="en-small">
+                Reciprocal link
+              </span>
+            </h1>
+            <div className="mb-8 pb-3 gap-4">
+              <ReciprocalLink url="https://ilovejunkpcnico.netlify.app/">
+                <span lang="en">Nico</span>さん
+              </ReciprocalLink>
+              <ReciprocalLink url="https://mellllonsoda.github.io/mellllonsoda-s-page/">
+                めろんそ〜ださん
+              </ReciprocalLink>
+              <ReciprocalLink url="https://www.kaerubasyo.com/">
+                <span lang="en">kaeru</span>さん
+              </ReciprocalLink>
+              <ReciprocalLink url="https://www.yuito-it.jp/">
+                ゆいとさん
+              </ReciprocalLink>
             </div>
           </div>
         </div>
