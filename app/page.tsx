@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Card } from "@/components/ui/card";
-import { Skills } from "@/components/ui/skills";
-import { ReciprocalLink } from "@/components/ui/reciprocal_link";
+const Skills = dynamic(() =>
+  import("@/components/ui/skills").then((mod) => mod.Skills)
+);
+
+const ReciprocalLink = dynamic(() =>
+  import("@/components/ui/reciprocal_link").then((mod) => mod.ReciprocalLink)
+);
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdGroups, MdMonitorHeart } from "react-icons/md";
 
