@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Card } from "@/components/ui/card";
 const Skills = dynamic(() =>
@@ -9,6 +8,11 @@ const Skills = dynamic(() =>
 const ReciprocalLink = dynamic(() =>
   import("@/components/ui/reciprocal_link").then((mod) => mod.ReciprocalLink)
 );
+
+const Footer = dynamic(() =>
+  import("@/components/ui/footer").then((mod) => mod.Footer)
+);
+
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdGroups, MdMonitorHeart } from "react-icons/md";
 
@@ -37,6 +41,8 @@ export default function Home() {
                       href="https://github.com/ayane0857"
                       aria-label="GitHub"
                       className="hover:opacity-80"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <FaGithub className="w-6 h-6" />
                     </a>
@@ -44,6 +50,8 @@ export default function Home() {
                       href="https://x.com/ayane0857_"
                       aria-label="Twitter"
                       className="hover:opacity-80"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <FaTwitter className="w-6 h-6" />
                     </a>
@@ -51,6 +59,8 @@ export default function Home() {
                       href="https://www.youtube.com/@ayane0857"
                       aria-label="YouTube"
                       className="hover:opacity-80"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <FaYoutube className="w-6 h-6" />
                     </a>
@@ -58,6 +68,8 @@ export default function Home() {
                       href="https://discord.gg/mB3AXgtVEY"
                       aria-label="Discord"
                       className="hover:opacity-80"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <FaDiscord className="w-6 h-6" />
                     </a>
@@ -66,6 +78,8 @@ export default function Home() {
                     <a
                       href="mailto:info@ayane0857.net"
                       className="flex items-center space-x-1 hover:opacity-80 text-base"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <MdEmail className="w-5 h-5" />
                       <span className="break-all" lang="en">
@@ -77,6 +91,8 @@ export default function Home() {
                     <a
                       href="https://www.uniproject.jp/"
                       className="flex items-center space-x-1 hover:opacity-80 text-base"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <MdGroups className="w-5 h-5" />
                       <span className="break-all" lang="en">
@@ -88,6 +104,8 @@ export default function Home() {
                     <a
                       href="https://ayane.instatus.com/"
                       className="flex items-center space-x-1 hover:opacity-80 text-base"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <MdMonitorHeart className="w-5 h-5" />
                       <span className="break-all" lang="en">
@@ -205,14 +223,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="flex items-center justify-center w-full p-4 gap-4">
-        <Link className="text-xl" href={"/terms-of-service"}>
-          利用規約
-        </Link>
-        <Link className="text-xl" href={"/privacy-policy"}>
-          プライバシーポリシー
-        </Link>
-      </footer>
+      <Footer />
     </div>
   );
 }

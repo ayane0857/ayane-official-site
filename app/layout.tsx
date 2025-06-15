@@ -19,6 +19,7 @@ const Inter_font = Inter({
 export const metadata = {
   title: "彩音のてきとーなサイト",
   description: "プロフィールオンリー",
+  themeColor: "#D58F99",
 };
 
 export default function RootLayout({

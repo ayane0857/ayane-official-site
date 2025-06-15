@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Footer } from "@/components/ui/footer";
 export const metadata = {
   title: "プライバシーポリシー",
   description: "プライバシーポリシー",
+  themeColor: "#D58F99",
 };
 
 export default function Home() {
@@ -29,7 +31,7 @@ export default function Home() {
             /<Link href={"/"}>home</Link>/privacy-policy
           </div>
 
-          <h2 className="text-center text-4xl font-normal text-black mb-2">
+          <h2 className="text-center text-4xl font-normal text-black mb-4">
             プライバシーポリシー
           </h2>
 
@@ -250,6 +252,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

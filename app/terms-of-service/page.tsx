@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Footer } from "@/components/ui/footer";
 export const metadata = {
   title: "利用規約",
   description: "利用規約",
+  themeColor: "#D58F99",
 };
 
 export default function Home() {
@@ -29,7 +31,7 @@ export default function Home() {
             /<Link href={"/"}>home</Link>/terms-of-service
           </div>
 
-          <h2 className="text-center text-4xl font-normal text-black mb-2">
+          <h2 className="text-center text-4xl font-normal text-black mb-4">
             利用規約
           </h2>
 
@@ -232,6 +234,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
