@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#F9F6F7]">
       <Link href={"/"}>
         <header className="flex items-center p-5">
           <div className="w-[60px] h-[60px]">
