@@ -10,8 +10,11 @@ export default function Custom404() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-[#F9F6F7]">
       <Card className="max-w-2xl w-full bg-[#D58F99] border-none shadow-none flex items-center justify-center">
-        <CardContent className="p-16 text-center">
-          <h1 className="text-6xl md:text-7xl font-bold mb-8 text-figma-text">
+        <CardContent className="p-16 text-center" lang="en">
+          <h1
+            className="text-6xl md:text-7xl font-bold mb-8"
+            lang="en-big-bold"
+          >
             404 Not Found
           </h1>
 
