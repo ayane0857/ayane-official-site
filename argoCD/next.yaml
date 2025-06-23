@@ -5,11 +5,11 @@ metadata:
 spec:
   topologySpreadConstraints:
   - maxSkew: 1
-    topologyKey: zone
+    topologyKey: kubernetes.io/hostname
     whenUnsatisfiable: DoNotSchedule
     labelSelector:
       matchLabels:
-        foo: ayane-official-site
+        app: ayane-official-site
   revisionHistoryLimit: 3
   selector:
     matchLabels:
