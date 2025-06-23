@@ -3,6 +3,13 @@ kind: Deployment
 metadata:
   name: ayane-official-site
 spec:
+  topologySpreadConstraints:
+  - maxSkew: 1
+    topologyKey: zone
+    whenUnsatisfiable: DoNotSchedule
+    labelSelector:
+      matchLabels:
+        foo: ayane-official-site
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -20,15 +27,6 @@ spec:
           ports:
             - containerPort: 3000
               name: default-port
-  topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: DoNotSchedule
-        labelSelector:
-          matchLabels:
-            app: ayane-official-site
-        matchLabelKeys:
-          - ayane-official-site
 ---
 apiVersion: v1
 kind: Service
