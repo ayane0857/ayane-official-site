@@ -1,5 +1,6 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import type { Viewport } from "next";
 import { Card } from "@/components/ui/card";
 const Skills = dynamic(() =>
   import("@/components/ui/skills").then((mod) => mod.Skills)
@@ -15,6 +16,10 @@ const Footer = dynamic(() =>
 
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdGroups, MdMonitorHeart } from "react-icons/md";
+
+export const viewport: Viewport = {
+  themeColor: "#D58F99",
+};
 
 export default function Home() {
   return (

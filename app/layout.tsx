@@ -1,6 +1,13 @@
 import { Zen_Maru_Gothic } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import type { Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  userScalable: false,
+};
 
 const ZenMaru_font = Zen_Maru_Gothic({
   subsets: ["latin"],
@@ -19,7 +26,6 @@ const Inter_font = Inter({
 export const metadata = {
   title: "彩音のてきとーなサイト",
   description: "プロフィールオンリー",
-  themeColor: "#D58F99",
 };
 
 export default function RootLayout({
