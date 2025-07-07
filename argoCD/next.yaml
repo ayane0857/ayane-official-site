@@ -17,7 +17,7 @@ spec:
         - name: internal-harbor
       containers:
         - name: app
-          image: registry.uniproject.jp/ayane/ayane-official-site:1.4.9
+          image: registry.uniproject.jp/ayane/ayane-official-site:1.4.10
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
