@@ -1,5 +1,6 @@
 import { Zen_Maru_Gothic } from "next/font/google";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import type { Viewport } from "next";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
       className={`${ZenMaru_font.variable} ${Inter_font.variable}`}
     >
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
     </html>
   );
 }
