@@ -1,7 +1,8 @@
-import Image from "next/image";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import type { Viewport } from "next";
 import { Card } from "@/components/ui/card";
+
 const Skills = dynamic(() =>
   import("@/components/ui/skills").then((mod) => mod.Skills)
 );
@@ -14,8 +15,12 @@ const Footer = dynamic(() =>
   import("@/components/ui/footer").then((mod) => mod.Footer)
 );
 
+const Icon = dynamic(() =>
+  import("@/components/animation-icon").then((mod) => mod.Icon)
+);
+
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
-import { MdEmail, MdGroups, MdMonitorHeart } from "react-icons/md";
+import { MdEmail, MdOutlineTextSnippet } from "react-icons/md";
 
 export const viewport: Viewport = {
   themeColor: "#D58F99",
@@ -29,16 +34,7 @@ export default function Home() {
           <Card className="w-full h-auto flex flex-col items-center bg-[#D58F99] shadow-lg border-0 p-4">
             <div className="flex flex-col items-center w-full h-full space-y-4">
               <div className="flex justify-between items-center">
-                <div className="w-40 h-40 relative">
-                  <Image
-                    src="/icon.png"
-                    alt="アイコン"
-                    width={192}
-                    height={192}
-                    className="object-cover"
-                    priority
-                  />
-                </div>
+                <Icon />
                 <div>
                   <h2 className="text-3xl font-bold">彩音</h2>
                   <div className="flex space-x-4 my-2">
@@ -93,30 +89,17 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <a
-                      href="https://www.uniproject.jp/"
+                    <Link
+                      href={"/license"}
                       className="flex items-center space-x-1 hover:opacity-80 text-base"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <MdGroups className="w-5 h-5" />
+                      <MdOutlineTextSnippet className="w-5 h-5" />
                       <span className="break-all" lang="en">
-                        UniProject
+                        ライセンス
                       </span>
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <a
-                      href="https://ayane.instatus.com/"
-                      className="flex items-center space-x-1 hover:opacity-80 text-base"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <MdMonitorHeart className="w-5 h-5" />
-                      <span className="break-all" lang="en">
-                        Instatus
-                      </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -133,16 +116,14 @@ export default function Home() {
                 めちゃんこ初心者なので手加減してほしいなぁ
                 <br />
                 <span lang="en">UniProject</span>
-                に所属している(トラックナンバーでもある)
-                <br />
-                <span lang="en">Disnana</span>にもたまに顔を出している
+                で普段活動している
                 <br />
               </p>
             </div>
           </Card>
         </div>
 
-        <div className="w-full md:w-[calc(100%-20rem)] lg:w-[calc(100%-24rem)] flex items-center justify-start p-4 md:p-12 md:ml-80 lg:ml-96">
+        <div className="w-full md:w-[calc(100%-20rem)] lg:w-[calc(100%-24rem)] flex items-center justify-start p-12 md:ml-80 lg:ml-96">
           <div className="max-w-4xl w-full mx-auto">
             <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
               <span className="text-primary" lang="en-small">
