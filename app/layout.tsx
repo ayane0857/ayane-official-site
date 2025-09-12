@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import type { Viewport } from "next";
+import { LenisProvider } from "@/components/ui/lenis";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -39,6 +40,7 @@ export default function RootLayout({
       lang="ja"
       className={`${ZenMaru_font.variable} ${Inter_font.variable}`}
     >
+      <LenisProvider />
       <body>{children}</body>
       <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
     </html>

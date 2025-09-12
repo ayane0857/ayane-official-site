@@ -5,12 +5,6 @@ export function Footer() {
   return (
     <footer className="flex flex-col items-center justify-center w-full p-4 gap-4">
       <div className="flex justify-center space-x-4">
-        <Link className="text-lg hover:underline" href={"/terms-of-service"}>
-          利用規約
-        </Link>
-        <Link className="text-lg hover:underline" href={"/privacy-policy"}>
-          プライバシーポリシー
-        </Link>
         <Link className="text-lg hover:underline" href={"/license"}>
           ライセンス
         </Link>
