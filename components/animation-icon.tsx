@@ -9,7 +9,9 @@ export const Icon = () => {
     hover(".icon", (element) => {
       animate(element, { scale: 1.1, rotate: -10 }, { duration: 0.3 });
 
-      return () => animate(element, { scale: 1, rotate: 0 }, { duration: 0.3 });
+      return () => {
+        animate(element, { scale: 1, rotate: 0 }, { duration: 0.3 });
+      };
     });
     press(".icon", (element) => {
       animate(element, { scale: 0.9 }, { type: "spring", stiffness: 700 });

@@ -9,7 +9,7 @@ export const Service = () => {
             href="https://ayano.ayane0857.net"
             className="block group transition-all duration-300"
           >
-            <div className="border rounded-lg overflow-hidden shadow-sm duration-300 bg-white dark:bg-slate-800">
+            <div className="border rounded-lg overflow-hidden shadow-sm duration-300 bg-white dark:bg-slate-800 hover:shadow-md">
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200 transition-colors">
                   彩乃
@@ -49,7 +49,7 @@ export const Service = () => {
             href="https://utau.ayane0857.net"
             className="block group transition-all duration-300"
           >
-            <div className="border rounded-lg overflow-hidden shadow-sm duration-300 bg-white dark:bg-slate-800">
+            <div className="border rounded-lg overflow-hidden shadow-sm duration-300 bg-white dark:bg-slate-800 hover:shadow-md">
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200 transition-colors">
                   彩奏 彼方 <span lang="en-bold">(UTAU)</span>

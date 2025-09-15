@@ -87,7 +87,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                     >
                       <MdEmail className="w-5 h-5" />
-                      <span className="break-all" lang="en">
+                      <span className="break-all whitespace-nowrap" lang="en">
                         info@ayane0857.net
                       </span>
                     </a>
@@ -100,6 +100,17 @@ export default function Home() {
                       <MdOutlineTextSnippet className="w-5 h-5" />
                       <span className="break-all" lang="en">
                         ライセンス
+                      </span>
+                    </Link>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Link
+                      className="flex items-center space-x-1 hover:opacity-80 text-base"
+                      href="/super_thanks"
+                    >
+                      <MdOutlineTextSnippet className="w-5 h-5" />
+                      <span className="break-all" lang="en">
+                        謝辞
                       </span>
                     </Link>
                   </div>
@@ -151,12 +162,12 @@ export default function Home() {
                 Provided Services
               </span>
             </h1>
+            <Service />
             <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
               <span className="text-primary" lang="en-small">
                 Reciprocal link
               </span>
             </h1>
-            <Service />
             <div className="mb-8 pb-3 gap-4">
               <ReciprocalLink url="https://ilovejunkpcnico.netlify.app/">
                 <span lang="en">Nico</span>さん

@@ -1,5 +1,4 @@
-import { Zen_Maru_Gothic } from "next/font/google";
-import { Inter } from "next/font/google";
+import { Zen_Maru_Gothic, Inter, M_PLUS_1_Code } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import type { Viewport } from "next";
@@ -13,7 +12,7 @@ export const viewport: Viewport = {
 
 const ZenMaru_font = Zen_Maru_Gothic({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["300", "400"],
   style: "normal",
   variable: "--font-jp",
 });
@@ -23,6 +22,13 @@ const Inter_font = Inter({
   weight: ["300", "400"],
   style: "normal",
   variable: "--font-en",
+});
+
+const M_PLUS_1_Code_font = M_PLUS_1_Code({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  style: "normal",
+  variable: "--font-code",
 });
 
 export const metadata = {
@@ -39,7 +45,7 @@ export default function RootLayout({
     <html lang="ja">
       <body
         lang="ja"
-        className={`${ZenMaru_font.variable} ${Inter_font.variable}`}
+        className={`${ZenMaru_font.variable} ${Inter_font.variable} ${M_PLUS_1_Code_font.variable}`}
       >
         <LenisProvider />
         <ProgressProviders>{children}</ProgressProviders>
