@@ -24,8 +24,8 @@ export default function Home() {
       <main className="px-5 py-10">
         <div className="mx-auto max-w-5xl rounded-lg border-2 p-6 lg:p-10 min-h-[600px]">
           <h2
-            className="text-center text-4xl font-normal text-black mb-4"
-            lang="ja-bold"
+            className="text-center font-bold text-4xl font-normal text-black mb-4"
+            lang="ja-big-bold"
           >
             ライセンス
           </h2>

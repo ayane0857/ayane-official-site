@@ -98,19 +98,22 @@ export default function Home() {
       <main className="px-5 py-10">
         <div className="mx-auto max-w-5xl rounded-lg bg-[#f9f6f7] border-2 p-10 min-h-[600px]">
           <h2
-            className="text-center text-4xl font-normal text-black mb-4"
-            lang="ja-bold"
+            className="text-center font-bold text-4xl font-normal text-black mb-4"
+            lang="ja-big-bold"
           >
             謝辞
           </h2>
 
-          <div className="text-black pl-4 text-xs md:text-sm lg:text-base space-y-2">
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              このプロジェクトを実現してくれた素晴らしい人々全員に心からの感謝を申し上げます。
+          <div className="text-black pl-4 text-xs md:text-sm lg:text-base space-y-2 text-center">
+            <p className="text-lg max-w-2xl mx-auto text-pretty">
+              手伝ってくれた人々全員に感謝します！！
             </p>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-center text-foreground mb-8">
+              <h2
+                className="text-3xl text-center text-foreground mb-8"
+                lang="ja-bold"
+              >
                 寄稿者
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -134,7 +137,7 @@ export default function Home() {
                           {contributor.name}
                         </h3>
                       </div>
-                      <p className="text-muted-foreground mb-2 leading-relaxed">
+                      <p className="mb-2 leading-relaxed">
                         {contributor.contribution}
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -166,17 +169,17 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Footer */}
-            <footer className="text-center">
-              <div className="bg-muted rounded-lg p-8">
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  ありがとう
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-pretty">
-                  コード、デザイン、フィードバック、サポートなど、このプロジェクトに貢献してくださった皆様、私たちの旅路にご参加いただき、誠にありがとうございます。皆様の貢献が大きな変化をもたらしました。
-                </p>
-              </div>
-            </footer>
+            {/* LICENSE */}
+            <div className="max-w-4xl mx-auto py-8">
+              <p className="text-lg">ライセンス</p>
+              <p className="text-muted-foreground text-sm mb-4">
+                ゆいとさんのアイコンは(c) 2023-2025 Yuito Akatsuki{" "}
+                <a href="https://github.com/yuito-it/yuito.work/blob/main/LICENSE">
+                  CC BY-NC-SA 4.0
+                </a>
+                です。
+              </p>
+            </div>
           </div>
         </div>
       </main>
