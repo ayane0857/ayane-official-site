@@ -46,7 +46,7 @@ const contributors: Contributor[] = [
   },
   {
     name: "あかつき ゆいと",
-    contribution: "デザインやコードの修正や案の提出",
+    contribution: "デザインやコードのレビュー",
     icon: "/yuito.png",
     socialLinks: [
       {
