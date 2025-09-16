@@ -29,4 +29,10 @@ jobs:
         run: docker build -t registry.uniproject.jp/ayane/ayane-official-site:${{ env.TAG_NAME }} .
 
       - name: Push Docker image
-        run: docker push registry.uniproject.jp/ayane/ayane-official-site:${{ env.TAG_NAME }}
+        uses: docker/build-push-action@v5
+        with:
+          file: ./Dockerfile
+          push: true
+          context: .
+          cache-from: type=registry,ref=registry.uniproject.jp/ayane/ayane-official-site:buildcache
+          cache-to: type=registry,ref=registry.uniproject.jp/ayane/ayane-official-site:buildcache,mode=max
