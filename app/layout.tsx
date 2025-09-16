@@ -5,9 +5,9 @@ import type { Viewport } from "next";
 import { LenisProvider } from "@/components/lenis";
 import ProgressProviders from "@/components/ProgressBarProvider";
 export const viewport: Viewport = {
+  themeColor: "#D58F99",
   width: "device-width",
   initialScale: 1.0,
-  userScalable: false,
 };
 
 const ZenMaru_font = Zen_Maru_Gothic({
