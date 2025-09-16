@@ -1,5 +1,6 @@
 import { IoReturnUpBackOutline } from "react-icons/io5";
 import Image from "next/image";
+import type { Viewport } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/ui/footer";
 import { ExternalLink, Twitter, Youtube, Github } from "lucide-react";
@@ -78,8 +79,12 @@ function getSocialIcon(platform: string) {
   }
 }
 export const metadata = {
-  title: "ライセンス",
-  description: "ライセンス",
+  title: "謝辞",
+  description: "手伝ってくれた人々全員！！！",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#D58F99",
 };
 
 export default function Home() {

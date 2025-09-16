@@ -1,11 +1,17 @@
 import { IoReturnUpBackOutline } from "react-icons/io5";
 
 import Link from "next/link";
+import type { Viewport } from "next";
 import { Footer } from "@/components/ui/footer";
 import { ExternalLink } from "lucide-react";
+
 export const metadata = {
   title: "ライセンス",
   description: "ライセンス",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#D58F99",
 };
 
 export default function Home() {
