@@ -62,6 +62,19 @@ const contributors: Contributor[] = [
       { platform: "website", url: "https://www.yuito-it.jp/ja" },
     ],
   },
+  {
+    name: "しひろさん",
+    contribution: "総合的なレビュー及び監修",
+    icon: "/shiro.png",
+    socialLinks: [
+      {
+        platform: "twitter",
+        url: "https://x.com/shiro_shihi",
+        handle: "@shiro_shihi",
+      },
+      { platform: "website", url: "https://shihiro.com/" },
+    ],
+  },
 ];
 
 function getSocialIcon(platform: string) {
