@@ -1,4 +1,4 @@
-spanimport Link from "next/link";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import type { Viewport } from "next";
 import { Card } from "@/components/ui/card";
