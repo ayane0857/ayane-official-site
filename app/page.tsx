@@ -1,4 +1,4 @@
-import Link from "next/link";
+spanimport Link from "next/link";
 import dynamic from "next/dynamic";
 import type { Viewport } from "next";
 import { Card } from "@/components/ui/card";
@@ -182,6 +182,9 @@ export default function Home() {
               </ReciprocalLink>
               <ReciprocalLink url="https://www.yuito-it.jp/">
                 ゆいとさん
+              </ReciprocalLink>
+              <ReciprocalLink url="https://activetk.jp/">
+                <span lang="en">ActiveTK</span>さん
               </ReciprocalLink>
             </div>
           </div>
