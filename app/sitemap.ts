@@ -9,13 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://ayane0857.net/privacy-policy",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 1,
-    },
-    {
-      url: "https://ayane0857.net/terms-of-service",
+      url: "https://ayane0857.net/super_thanks",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
