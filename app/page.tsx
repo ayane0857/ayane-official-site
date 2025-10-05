@@ -186,6 +186,9 @@ export default function Home() {
               <ReciprocalLink url="https://activetk.jp/">
                 <span lang="en">ActiveTK</span>さん
               </ReciprocalLink>
+              <ReciprocalLink url="https://256server.com/">
+                <span lang="en">256server</span>さん
+              </ReciprocalLink>
             </div>
           </div>
         </div>
