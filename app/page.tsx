@@ -189,6 +189,9 @@ export default function Home() {
               <ReciprocalLink url="https://256server.com/">
                 <span lang="en">256server</span>さん
               </ReciprocalLink>
+              <ReciprocalLink url="https://shihiro.com/">
+                しひろさん
+              </ReciprocalLink>
             </div>
           </div>
         </div>
