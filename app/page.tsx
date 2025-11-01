@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import type { Viewport } from "next";
 import { Card } from "@/components/ui/card";
 
+// SSRを有効にして動的インポート（初期表示に必要）
 const Skills = dynamic(() =>
   import("@/components/ui/skills").then((mod) => mod.Skills)
 );
@@ -15,13 +16,16 @@ const ReciprocalLink = dynamic(() =>
   import("@/components/ui/reciprocal_link").then((mod) => mod.ReciprocalLink)
 );
 
-const Footer = dynamic(
-  () => import("@/components/ui/footer").then((mod) => mod.Footer),
-  { ssr: false }
+const Footer = dynamic(() =>
+  import("@/components/ui/footer").then((mod) => mod.Footer)
 );
 
+// アニメーションは遅延読み込み（LCP改善）
 const Icon = dynamic(() =>
-  import("@/components/animation-icon").then((mod) => mod.Icon)
+  import("@/components/animation-icon").then((mod) => mod.Icon),
+  { loading: () => (
+    <div className="w-48 h-48 bg-gray-200 animate-pulse rounded-lg" />
+  )}
 );
 
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
