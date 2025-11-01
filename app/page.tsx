@@ -15,8 +15,9 @@ const ReciprocalLink = dynamic(() =>
   import("@/components/ui/reciprocal_link").then((mod) => mod.ReciprocalLink)
 );
 
-const Footer = dynamic(() =>
-  import("@/components/ui/footer").then((mod) => mod.Footer)
+const Footer = dynamic(
+  () => import("@/components/ui/footer").then((mod) => mod.Footer),
+  { ssr: false }
 );
 
 const Icon = dynamic(() =>

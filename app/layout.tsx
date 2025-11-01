@@ -15,6 +15,9 @@ const ZenMaru_font = Zen_Maru_Gothic({
   weight: ["300", "400"],
   style: "normal",
   variable: "--font-jp",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const Inter_font = Inter({
@@ -22,6 +25,9 @@ const Inter_font = Inter({
   weight: ["300", "400"],
   style: "normal",
   variable: "--font-en",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const M_PLUS_1_Code_font = M_PLUS_1_Code({
@@ -29,6 +35,9 @@ const M_PLUS_1_Code_font = M_PLUS_1_Code({
   weight: ["300", "400"],
   style: "normal",
   variable: "--font-code",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata = {

@@ -38,6 +38,8 @@ export const Icon = () => {
         height={192}
         className="object-cover"
         priority
+        fetchPriority="high"
+        quality={85}
       />
     </div>
   );
