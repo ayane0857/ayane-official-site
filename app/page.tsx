@@ -43,19 +43,19 @@ const skillsList = [
   { icon: "SiAirplayvideo", text: "YMM4" },
 ] as const;
 
+export const metadata = {
+  title: "ほーむ",
+  description: "あやねのてきとーなさいとのほーむだよ！",
+};
+
 export const viewport: Viewport = {
   themeColor: "#D58F99",
   width: "device-width",
   initialScale: 1.0,
 };
 
-export const metadata = {
-  title: "ほーむ",
-  description: "あやねのてきとーなさいとのほーむだよ！",
-};
-
-export default async function Home() {
-  await new Promise((r) => setTimeout(r, 3000));
+async function PageContent() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   return (
     <div className="bg-[#F9F6F7]">
       <div className="flex flex-col md:flex-row min-h-screen w-full p-4 md:p-8">
@@ -230,5 +230,13 @@ export default async function Home() {
         <Footer />
       </Suspense>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+      <PageContent />
+    </>
   );
 }

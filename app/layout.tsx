@@ -45,8 +45,8 @@ const M_PLUS_1_Code_font = M_PLUS_1_Code({
 });
 
 export const metadata = {
-  title: "彩音のてきとーなサイト",
-  description: "プロフィールオンリー",
+  title: "ほーむ",
+  description: "あやねのてきとーなさいとのほーむだよ！",
 };
 
 export default function RootLayout({
