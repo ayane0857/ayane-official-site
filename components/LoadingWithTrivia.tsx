@@ -27,6 +27,7 @@ export default function LoadingWithTrivia() {
     const remaining = Math.max(0, MINIMUM_LOADING_TIME - elapsed);
 
     const timer = setTimeout(() => {
+      console.log(isMinimumTimePassed);
       setIsMinimumTimePassed(true);
     }, remaining);
 
