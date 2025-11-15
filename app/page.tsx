@@ -54,7 +54,8 @@ export const metadata = {
   description: "あやねのてきとーなさいとのほーむだよ！",
 };
 
-export default function Home() {
+export default async function Home() {
+  await new Promise((r) => setTimeout(r, 2000));
   return (
     <div className="bg-[#F9F6F7]">
       <div className="flex flex-col md:flex-row min-h-screen w-full p-4 md:p-8">
