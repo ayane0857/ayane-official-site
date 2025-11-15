@@ -1,8 +1,10 @@
-name: Docker Build and Push
+name: Docker Build and Push with sakura
+
 on:
   push:
-    tags:
-      - "v*"
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   BuildAndPush:
@@ -21,7 +23,7 @@ jobs:
       - name: Login to Harbor Registry
         uses: docker/login-action@v3
         with:
-          registry: cr.ayane0857.net
+          registry: ayane.sakuracr.jp
           username: ayane
           password: ${{ secrets.HARBOR_TOKEN }}
 
@@ -31,6 +33,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: registry.uniproject.jp/ayane/ayane-official-site:${{ env.TAG_NAME }}
-          cache-from: type=registry,ref=registry.uniproject.jp/ayane/ayane-official-site:buildcache
-          cache-to: type=registry,ref=registry.uniproject.jp/ayane/ayane-official-site:buildcache,mode=max
+          tags: ayane.sakuracr.jp/ayane/ayane-official-site:${{ env.TAG_NAME }}
