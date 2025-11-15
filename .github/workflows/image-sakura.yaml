@@ -2,9 +2,9 @@ name: Docker Build and Push with sakura
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   BuildAndPush:
@@ -12,10 +12,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # これが超重要！タグ情報も全部取る
 
-      - name: Extract tag name
+      - name: Get latest tag
         run: |
-          tagname=${GITHUB_REF#refs/*/} && echo "TAG_NAME=${tagname#v}" >> $GITHUB_ENV
+          # 直近のタグ取得（annotated/lightweight 両対応）
+          latest_tag=$(git describe --tags --abbrev=0)
+          echo "TAG_NAME=${latest_tag#v}" >> $GITHUB_ENV
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
