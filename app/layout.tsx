@@ -2,7 +2,10 @@ import { Zen_Maru_Gothic, Inter, M_PLUS_1_Code } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import type { Viewport } from "next";
-import { LenisProvider } from "@/components/lenis";
+import dynamic from "next/dynamic";
+const LenisProvider = dynamic(() =>
+  import("@/components/lenis").then((mod) => mod.LenisProvider)
+);
 import ProgressProviders from "@/components/ProgressBarProvider";
 export const viewport: Viewport = {
   themeColor: "#D58F99",

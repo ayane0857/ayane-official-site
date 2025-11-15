@@ -1,9 +1,9 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import type { Viewport } from "next";
 import { Card } from "@/components/ui/card";
 
-// SSRを有効にして動的インポート（初期表示に必要）
 const Skills = dynamic(() =>
   import("@/components/ui/skills").then((mod) => mod.Skills)
 );
@@ -20,16 +20,28 @@ const Footer = dynamic(() =>
   import("@/components/ui/footer").then((mod) => mod.Footer)
 );
 
-// アニメーションは遅延読み込み（LCP改善）
-const Icon = dynamic(() =>
-  import("@/components/animation-icon").then((mod) => mod.Icon),
-  { loading: () => (
-    <div className="w-48 h-48 bg-gray-200 animate-pulse rounded-lg" />
-  )}
+const AnimationIcon = dynamic(
+  () => import("@/components/animation-icon").then((mod) => mod.Icon),
+  { loading: () => <div className="w-48 h-48" /> }
 );
 
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdOutlineTextSnippet } from "react-icons/md";
+
+const skillsList = [
+  { icon: "SiJavascript", text: "JavaScript" },
+  { icon: "SiNextdotjs", text: "Next.js" },
+  { icon: "SiNodedotjs", text: "Node.js" },
+  { icon: "SiPython", text: "Python" },
+  { icon: "SiTypescript", text: "TypeScript" },
+  { icon: "SiTailwindcss", text: "Tailwind CSS" },
+  { icon: "SiPostgresql", text: "PostgreSQL" },
+  { icon: "SiKubernetes", text: "Kubernetes" },
+  { icon: "SiGit", text: "Git" },
+  { icon: "SiArgo", text: "ArgoCD" },
+  { icon: "SiLinux", text: "Linux" },
+  { icon: "SiAirplayvideo", text: "YMM4" },
+] as const;
 
 export const viewport: Viewport = {
   themeColor: "#D58F99",
@@ -37,15 +49,23 @@ export const viewport: Viewport = {
   initialScale: 1.0,
 };
 
+export const metadata = {
+  title: "ほーむ",
+  description: "あやねのてきとーなさいとのほーむだよ！",
+};
+
 export default function Home() {
   return (
     <div className="bg-[#F9F6F7]">
       <div className="flex flex-col md:flex-row min-h-screen w-full p-4 md:p-8">
-        <div className="w-full md:w-80 lg:w-96 flex items-center justify-center md:justify-start mb-6 md:mb-0 md:fixed md:top-1/2 md:-translate-y-1/2 md:h-screen md:overflow-y-auto">
+        <div
+          className="w-full md:w-80 lg:w-96 flex items-center justify-center md:justify-start mb-6 md:mb-0 md:fixed md:top-1/2 md:-translate-y-1/2 md:h-screen md:overflow-y-auto"
+          role="contentinfo"
+        >
           <Card className="w-full h-auto flex flex-col items-center bg-[#D58F99] shadow-lg border-0 p-4">
             <div className="flex flex-col items-center w-full h-full space-y-4">
               <div className="flex justify-between items-center">
-                <Icon />
+                <AnimationIcon />
                 <div>
                   <h2 className="text-3xl font-bold">彩音</h2>
                   <div className="flex space-x-4 my-2">
@@ -143,65 +163,71 @@ export default function Home() {
           </Card>
         </div>
 
-        <div className="w-full md:w-[calc(100%-20rem)] lg:w-[calc(100%-24rem)] flex items-center justify-start p-12 md:ml-80 lg:ml-96">
+        <div
+          className="w-full md:w-[calc(100%-20rem)] lg:w-[calc(100%-24rem)] flex items-center justify-start p-12 md:ml-80 lg:ml-96"
+          role="main"
+        >
           <div className="max-w-4xl w-full mx-auto">
-            <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-              <span className="text-primary" lang="en-small">
-                Skills
-              </span>
-            </h1>
-            <div className="grid grid-cols-2 mb-8 pb-3 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-              <Skills icon="SiJavascript" text="JavaScript" />
-              <Skills icon="SiNextdotjs" text="Next.js" />
-              <Skills icon="SiNodedotjs" text="Node.js" />
-              <Skills icon="SiPython" text="Python" />
-              <Skills icon="SiTypescript" text="TypeScript" />
-              <Skills icon="SiTailwindcss" text="Tailwind CSS" />
-              <Skills icon="SiPostgresql" text="PostgreSQL" />
-              <Skills icon="SiKubernetes" text="Kubernetes" />
-              <Skills icon="SiGit" text="Git" />
-              <Skills icon="SiArgo" text="ArgoCD" />
-              <Skills icon="SiLinux" text="Linux" />
-              <Skills icon="SiAirplayvideo" text="YMM4" />
-            </div>
-            <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-              <span className="text-primary" lang="en-small">
-                Provided Services
-              </span>
-            </h1>
-            <Service />
-            <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-              <span className="text-primary" lang="en-small">
-                Reciprocal link
-              </span>
-            </h1>
-            <div className="mb-8 pb-3 gap-4">
-              <ReciprocalLink url="https://ilovejunkpcnico.netlify.app/">
-                <span lang="en">Nico</span>さん
-              </ReciprocalLink>
-              <ReciprocalLink url="https://mellllonsoda.github.io/mellllonsoda-s-page/">
-                めろんそ〜ださん
-              </ReciprocalLink>
-              <ReciprocalLink url="https://www.kaerubasyo.com/">
-                <span lang="en">kaeru</span>さん
-              </ReciprocalLink>
-              <ReciprocalLink url="https://www.yuito-it.jp/">
-                ゆいとさん
-              </ReciprocalLink>
-              <ReciprocalLink url="https://activetk.jp/">
-                <span lang="en">ActiveTK</span>さん
-              </ReciprocalLink>
-              <ReciprocalLink url="https://256server.com/">
-                <span lang="en">256server</span>さん
-              </ReciprocalLink>
-              <ReciprocalLink url="https://shihiro.com/">
-                しひろさん
-              </ReciprocalLink>
-            </div>
+            <Suspense fallback={<div>Loading skills...</div>}>
+              <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
+                <span className="text-primary" lang="en-small">
+                  Skills
+                </span>
+              </h1>
+              <div className="grid grid-cols-2 mb-8 pb-3 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                {skillsList.map((skill) => (
+                  <Skills
+                    key={skill.text}
+                    icon={skill.icon}
+                    text={skill.text}
+                  />
+                ))}
+              </div>
+            </Suspense>
+            <Suspense fallback={<div>Loading services...</div>}>
+              <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
+                <span className="text-primary" lang="en-small">
+                  Provided Services
+                </span>
+              </h1>
+              <Service />
+            </Suspense>
+            <Suspense fallback={<div>Loading links...</div>}>
+              <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
+                <span className="text-primary" lang="en-small">
+                  Reciprocal link
+                </span>
+              </h1>
+              <div className="mb-8 pb-3 gap-4">
+                <ReciprocalLink url="https://ilovejunkpcnico.netlify.app/">
+                  <span lang="en">Nico</span>さん
+                </ReciprocalLink>
+                <ReciprocalLink url="https://mellllonsoda.github.io/mellllonsoda-s-page/">
+                  めろんそ〜ださん
+                </ReciprocalLink>
+                <ReciprocalLink url="https://www.kaerubasyo.com/">
+                  <span lang="en">kaeru</span>さん
+                </ReciprocalLink>
+                <ReciprocalLink url="https://www.yuito-it.jp/">
+                  ゆいとさん
+                </ReciprocalLink>
+                <ReciprocalLink url="https://activetk.jp/">
+                  <span lang="en">ActiveTK</span>さん
+                </ReciprocalLink>
+                <ReciprocalLink url="https://256server.com/">
+                  <span lang="en">256server</span>さん
+                </ReciprocalLink>
+                <ReciprocalLink url="https://shihiro.com/">
+                  しひろさん
+                </ReciprocalLink>
+              </div>
+            </Suspense>
           </div>
         </div>
       </div>
-      <Footer />
+      <Suspense fallback={<div />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
