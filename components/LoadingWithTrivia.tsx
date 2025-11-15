@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useEffect, useState } from "react";
+import { useMemo } from "react";
 
 const TRIVIA_LIST = [
   "彩音はとてもスイーツが大好きです",
@@ -11,28 +11,11 @@ const TRIVIA_LIST = [
   "彩音はごろごろYoutubeを見るのが大好きです",
 ];
 
-const MINIMUM_LOADING_TIME = 3000; // 3秒
-
 export default function LoadingWithTrivia() {
-  const [startTime] = useState(() => Date.now());
-  const [isMinimumTimePassed, setIsMinimumTimePassed] = useState(false);
-
   const trivia = useMemo(() => {
     const index = Math.floor(Math.random() * TRIVIA_LIST.length);
     return TRIVIA_LIST[index];
   }, []);
-
-  useEffect(() => {
-    const elapsed = Date.now() - startTime;
-    const remaining = Math.max(0, MINIMUM_LOADING_TIME - elapsed);
-
-    const timer = setTimeout(() => {
-      console.log(isMinimumTimePassed);
-      setIsMinimumTimePassed(true);
-    }, remaining);
-
-    return () => clearTimeout(timer);
-  }, [startTime]);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-[#F9F6F7] text-slate-800">
@@ -45,15 +28,4 @@ export default function LoadingWithTrivia() {
       </div>
     </div>
   );
-}
-
-// loading.tsxで使用する場合のラッパー関数をエクスポート
-export async function withMinimumLoadingTime<T>(
-  promise: Promise<T>
-): Promise<T> {
-  const [result] = await Promise.all([
-    promise,
-    new Promise((resolve) => setTimeout(resolve, MINIMUM_LOADING_TIME)),
-  ]);
-  return result;
 }

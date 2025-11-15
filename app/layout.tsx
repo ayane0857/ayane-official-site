@@ -3,14 +3,10 @@ import { Zen_Maru_Gothic, Inter, M_PLUS_1_Code } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import type { Viewport } from "next";
-import { Suspense } from "react";
 import dynamic from "next/dynamic";
 const LenisProvider = dynamic(() =>
   import("@/components/lenis").then((mod) => mod.LenisProvider)
 );
-
-import LoadingWithTrivia from "@/components/LoadingWithTrivia";
-import MinimumLoadingWrapper from "@/components/MinimumLoadingWrapper";
 import ProgressProviders from "@/components/ProgressBarProvider";
 export const viewport: Viewport = {
   themeColor: "#D58F99",
@@ -64,13 +60,9 @@ export default function RootLayout({
         lang="ja"
         className={`${ZenMaru_font.variable} ${Inter_font.variable} ${M_PLUS_1_Code_font.variable}`}
       >
-        <Suspense fallback={<LoadingWithTrivia />}>
-          <MinimumLoadingWrapper>
-            <LenisProvider />
-            <ProgressProviders>{children}</ProgressProviders>
-            <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
-          </MinimumLoadingWrapper>
-        </Suspense>
+        <LenisProvider />
+        <ProgressProviders>{children}</ProgressProviders>
+        <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
       </body>
     </html>
   );
