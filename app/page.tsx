@@ -54,6 +54,11 @@ export const viewport: Viewport = {
   initialScale: 1.0,
 };
 
+async function DelayedData() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return null; // 実際はここで何も返さなくてOK
+}
+
 async function PageContent() {
   await new Promise((resolve) => setTimeout(resolve, 3000));
   return (
@@ -235,8 +240,9 @@ async function PageContent() {
 
 export default function Home() {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
+      <DelayedData />
       <PageContent />
-    </>
+    </Suspense>
   );
 }
