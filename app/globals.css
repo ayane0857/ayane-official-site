@@ -74,41 +74,6 @@ body {
   font-weight: 400;
 }
 
-[lang="ja-small"] {
-  font-family: var(--font-jp), sans-serif;
-  font-weight: 300;
-}
-
-[lang="ja-bold"] {
-  font-family: var(--font-jp), sans-serif;
-  font-weight: 500;
-}
-
-[lang="ja-big-bold"] {
-  font-family: var(--font-jp), sans-serif;
-  font-weight: bold;
-}
-
-[lang="en-small"] {
-  font-family: var(--font-en), sans-serif;
-  font-weight: 300;
-}
-
-[lang="en"] {
-  font-family: var(--font-en), sans-serif;
-  font-weight: 400;
-}
-
-[lang="en-bold"] {
-  font-family: var(--font-en), sans-serif;
-  font-weight: 500;
-}
-
-[lang="en-big-bold"] {
-  font-family: var(--font-en), sans-serif;
-  font-weight: bold;
-}
-
 [lang="code"] {
   font-family: var(--font-code), sans-serif;
   font-weight: 400;

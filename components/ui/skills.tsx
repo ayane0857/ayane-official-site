@@ -13,9 +13,7 @@ export function Skills({ icon, text }: SkillsProps) {
       <div className="w-full flex items-center justify-center">
         <IconComponent size={55} className="text-gray-700" />
       </div>
-      <span className="text-[#000000] text-base font-normal" lang="en-small">
-        {text}
-      </span>
+      <span className="text-[#000000] text-base font-normal">{text}</span>
     </div>
   );
 }

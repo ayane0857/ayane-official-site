@@ -117,10 +117,7 @@ export default function Home() {
 
       <main className="px-5 py-10">
         <div className="mx-auto max-w-5xl rounded-lg bg-[#f9f6f7] border-2 p-10 min-h-[600px]">
-          <h2
-            className="text-center font-bold text-4xl font-normal text-black mb-4"
-            lang="ja-big-bold"
-          >
+          <h2 className="text-center font-bold text-4xl font-normal text-black mb-4">
             謝辞
           </h2>
 
@@ -130,10 +127,7 @@ export default function Home() {
             </p>
 
             <section className="mb-12">
-              <h2
-                className="text-3xl text-center text-foreground mb-8"
-                lang="ja-bold"
-              >
+              <h2 className="text-3xl text-center text-foreground mb-8">
                 寄稿者
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

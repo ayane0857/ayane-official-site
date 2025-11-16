@@ -122,7 +122,7 @@ export default async function Home() {
                       rel="noopener noreferrer"
                     >
                       <MdEmail className="w-5 h-5" />
-                      <span className="break-all whitespace-nowrap" lang="en">
+                      <span className="break-all whitespace-nowrap">
                         info@ayane0857.net
                       </span>
                     </a>
@@ -133,9 +133,7 @@ export default async function Home() {
                       href="/license"
                     >
                       <MdOutlineTextSnippet className="w-5 h-5" />
-                      <span className="break-all" lang="en">
-                        ライセンス
-                      </span>
+                      <span className="break-all">ライセンス</span>
                     </Link>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -144,16 +142,13 @@ export default async function Home() {
                       href="/super_thanks"
                     >
                       <MdOutlineTextSnippet className="w-5 h-5" />
-                      <span className="break-all" lang="en">
-                        謝辞
-                      </span>
+                      <span className="break-all">謝辞</span>
                     </Link>
                   </div>
                 </div>
               </div>
               <p className="text-base leading-relaxed">
-                <span lang="en">2010</span>
-                年製の中学生プログラマー兼動画編集者
+                2010年製の中学生プログラマー兼動画編集者
                 <br />
                 そこらへんにいる階級インフラレッドな人
                 <br />
@@ -163,8 +158,7 @@ export default async function Home() {
                 <br />
                 めちゃんこ初心者なので手加減してほしいなぁ
                 <br />
-                <span lang="en">UniProject</span>
-                で普段活動している
+                UniProjectで普段活動している
                 <br />
               </p>
             </div>
@@ -178,9 +172,7 @@ export default async function Home() {
           <div className="max-w-4xl w-full mx-auto">
             <Suspense fallback={<div>Loading skills...</div>}>
               <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-                <span className="text-primary" lang="en-small">
-                  Skills
-                </span>
+                <span className="text-primary">Skills</span>
               </h1>
               <div className="grid grid-cols-2 mb-8 pb-3 sm:grid-cols-3 lg:grid-cols-6 gap-6">
                 {skillsList.map((skill) => (
@@ -194,36 +186,32 @@ export default async function Home() {
             </Suspense>
             <Suspense fallback={<div>Loading services...</div>}>
               <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-                <span className="text-primary" lang="en-small">
-                  Provided Services
-                </span>
+                <span className="text-primary">Provided Services</span>
               </h1>
               <Service />
             </Suspense>
             <Suspense fallback={<div>Loading links...</div>}>
               <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-                <span className="text-primary" lang="en-small">
-                  Reciprocal link
-                </span>
+                <span className="text-primary">Reciprocal link</span>
               </h1>
               <div className="mb-8 pb-3 gap-4">
                 <ReciprocalLink url="https://ilovejunkpcnico.netlify.app/">
-                  <span lang="en">Nico</span>さん
+                  Nicoさん
                 </ReciprocalLink>
                 <ReciprocalLink url="https://mellllonsoda.github.io/mellllonsoda-s-page/">
                   めろんそ〜ださん
                 </ReciprocalLink>
                 <ReciprocalLink url="https://www.kaerubasyo.com/">
-                  <span lang="en">kaeru</span>さん
+                  kaeruさん
                 </ReciprocalLink>
                 <ReciprocalLink url="https://www.yuito-it.jp/">
                   ゆいとさん
                 </ReciprocalLink>
                 <ReciprocalLink url="https://activetk.jp/">
-                  <span lang="en">ActiveTK</span>さん
+                  ActiveTKさん
                 </ReciprocalLink>
                 <ReciprocalLink url="https://256server.com/">
-                  <span lang="en">256server</span>さん
+                  256serverさん
                 </ReciprocalLink>
                 <ReciprocalLink url="https://shihiro.com/">
                   しひろさん

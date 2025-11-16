@@ -1,5 +1,5 @@
 import React from "react";
-import { Zen_Maru_Gothic, Inter, M_PLUS_1_Code } from "next/font/google";
+import { Zen_Kaku_Gothic_New, M_PLUS_1_Code } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import type { Viewport } from "next";
@@ -14,9 +14,9 @@ export const viewport: Viewport = {
   initialScale: 1.0,
 };
 
-const ZenMaru_font = Zen_Maru_Gothic({
+const ZenMaru_font = Zen_Kaku_Gothic_New({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["400", "500"],
   style: "normal",
   variable: "--font-jp",
   display: "swap",
@@ -24,19 +24,9 @@ const ZenMaru_font = Zen_Maru_Gothic({
   adjustFontFallback: true,
 });
 
-const Inter_font = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400"],
-  style: "normal",
-  variable: "--font-en",
-  display: "swap",
-  preload: true,
-  adjustFontFallback: true,
-});
-
 const M_PLUS_1_Code_font = M_PLUS_1_Code({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["400"],
   style: "normal",
   variable: "--font-code",
   display: "swap",
@@ -57,8 +47,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        lang="ja"
-        className={`${ZenMaru_font.variable} ${Inter_font.variable} ${M_PLUS_1_Code_font.variable}`}
+        className={`${ZenMaru_font.variable} ${M_PLUS_1_Code_font.variable}`}
       >
         <LenisProvider />
         <ProgressProviders>{children}</ProgressProviders>
