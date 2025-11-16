@@ -1,29 +1,31 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import dynamicImport from "next/dynamic";
 import type { Viewport } from "next";
 import { Card } from "@/components/ui/card";
 
-const Skills = dynamic(() =>
+const Skills = dynamicImport(() =>
   import("@/components/ui/skills").then((mod) => mod.Skills)
 );
 
-const Service = dynamic(() =>
+const Service = dynamicImport(() =>
   import("@/components/service").then((mod) => mod.Service)
 );
 
-const ReciprocalLink = dynamic(() =>
+const ReciprocalLink = dynamicImport(() =>
   import("@/components/ui/reciprocal_link").then((mod) => mod.ReciprocalLink)
 );
 
-const Footer = dynamic(() =>
+const Footer = dynamicImport(() =>
   import("@/components/ui/footer").then((mod) => mod.Footer)
 );
 
-const AnimationIcon = dynamic(
+const AnimationIcon = dynamicImport(
   () => import("@/components/animation-icon").then((mod) => mod.Icon),
   { loading: () => <div className="w-48 h-48" /> }
 );
+
+export const dynamic = "force-dynamic";
 
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdOutlineTextSnippet } from "react-icons/md";
@@ -54,13 +56,13 @@ export const viewport: Viewport = {
   initialScale: 1.0,
 };
 
-async function DelayedData() {
+async function getPageData() {
   await new Promise((resolve) => setTimeout(resolve, 3000));
-  return null; // 実際はここで何も返さなくてOK
+  return { loaded: true };
 }
 
-async function PageContent() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+export default async function Home() {
+  await getPageData();
   return (
     <div className="bg-[#F9F6F7]">
       <div className="flex flex-col md:flex-row min-h-screen w-full p-4 md:p-8">
@@ -235,14 +237,5 @@ async function PageContent() {
         <Footer />
       </Suspense>
     </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <DelayedData />
-      <PageContent />
-    </Suspense>
   );
 }
