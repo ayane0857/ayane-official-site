@@ -1,31 +1,28 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import dynamicImport from "next/dynamic";
-import type { Viewport } from "next";
+import dynamic from "next/dynamic";
 import { Card } from "@/components/ui/card";
 
-const Skills = dynamicImport(() =>
+const Skills = dynamic(() =>
   import("@/components/ui/skills").then((mod) => mod.Skills)
 );
 
-const Service = dynamicImport(() =>
+const Service = dynamic(() =>
   import("@/components/service").then((mod) => mod.Service)
 );
 
-const ReciprocalLink = dynamicImport(() =>
+const ReciprocalLink = dynamic(() =>
   import("@/components/ui/reciprocal_link").then((mod) => mod.ReciprocalLink)
 );
 
-const Footer = dynamicImport(() =>
+const Footer = dynamic(() =>
   import("@/components/ui/footer").then((mod) => mod.Footer)
 );
 
-const AnimationIcon = dynamicImport(
+const AnimationIcon = dynamic(
   () => import("@/components/animation-icon").then((mod) => mod.Icon),
   { loading: () => <div className="w-48 h-48" /> }
 );
-
-export const dynamic = "force-dynamic";
 
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdOutlineTextSnippet } from "react-icons/md";
@@ -45,24 +42,7 @@ const skillsList = [
   { icon: "SiAirplayvideo", text: "YMM4" },
 ] as const;
 
-export const metadata = {
-  title: "ほーむ",
-  description: "あやねのてきとーなさいとのほーむだよ！",
-};
-
-export const viewport: Viewport = {
-  themeColor: "#D58F99",
-  width: "device-width",
-  initialScale: 1.0,
-};
-
-async function getPageData() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-  return { loaded: true };
-}
-
-export default async function Home() {
-  await getPageData();
+export default function Home() {
   return (
     <div className="bg-[#F9F6F7]">
       <div className="flex flex-col md:flex-row min-h-screen w-full p-4 md:p-8">
