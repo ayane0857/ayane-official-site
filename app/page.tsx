@@ -55,7 +55,7 @@ export default function Home() {
               <div className="flex justify-between items-center">
                 <AnimationIcon />
                 <div>
-                  <h2 className="text-3xl font-bold">彩音</h2>
+                  <h1 className="text-3xl font-bold">彩音</h1>
                   <div className="flex space-x-4 my-2">
                     <a
                       href="https://github.com/ayane0857"
