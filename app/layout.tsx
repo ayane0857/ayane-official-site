@@ -1,9 +1,10 @@
 import React from "react";
 import { Zen_Kaku_Gothic_New, M_PLUS_1_Code } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import "./globals.css";
+import "@/app/globals.css";
 import type { Metadata, Viewport } from "next";
 import dynamic from "next/dynamic";
+import { getLocale } from "next-intl/server";
 const LenisProvider = dynamic(() =>
   import("@/components/lenis").then((mod) => mod.LenisProvider)
 );
@@ -11,7 +12,7 @@ import ProgressProviders from "@/components/ProgressBarProvider";
 
 const ZenMaru_font = Zen_Kaku_Gothic_New({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "700"],
   style: "normal",
   variable: "--font-jp",
   display: "swap",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     description: "あやねのてきとーなさいとのほーむだよ！",
     url: "https://ayane0857.net/",
     siteName: "彩音のてきとーなサイト",
-    locale: "ja_JP",
+    locale: "ja",
     type: "website",
   },
   twitter: {
@@ -56,13 +57,14 @@ export const viewport: Viewport = {
   initialScale: 1.0,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
   return (
-    <html lang="ja">
+    <html lang={locale}>
       <body
         className={`${ZenMaru_font.variable} ${M_PLUS_1_Code_font.variable}`}
       >

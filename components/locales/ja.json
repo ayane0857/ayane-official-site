@@ -1,0 +1,49 @@
+{
+    "HomePage": {
+        "name": "彩音",
+        "license": "ライセンス",
+        "super_thanks": "謝辞",
+        "introduction": "2010年製の中学生プログラマー兼動画編集者\nそこらへんにいる階級インフラレッドな人\n動画投稿してるけど、最近あんまりやってない\nプログラミングとかやる気があるとやってます\nめちゃんこ初心者なので手加減してほしいなぁ\nUniProjectで普段活動している"
+    },
+    "ServiceList": {
+        "ayano-bot-title": "彩乃ボット",
+        "ayano-bot-desc": "現在開発中のDiscord Bot",
+        "kanata-title": "彩奏 彼方",
+        "kanata-desc": "単独音で構成されたシンプルな音源",
+        "slideshare-title": "彩音のスライド公開所",
+        "slideshare-desc": "私が今までにLTなどで使ったスライドを載せています",
+        "View-details": "詳しく見る"
+    },
+    "Footer": {
+        "Sitemap": "サイトマップ",
+        "Home": "ホーム",
+        "License": "ライセンス",
+        "super_thanks": "謝辞",
+        "SNS-links-text": "SNSリンク一覧"
+    },
+    "super_thanks": {
+        "go_home": "ホームへ戻る",
+        "title": "謝辞",
+        "description": "手伝ってくれた人々全員に感謝します！！",
+        "contributor": "寄稿者",
+        "platinum_sponsor": "プラチナスポンサー",
+        "gold_sponsor": "ゴールドスポンサー",
+        "icon_alt": "さんのアイコン",
+        "contribution_sa": "アイコン等イラストの制作",
+        "contribution_yune": "アイコン等イラストの制作",
+        "contribution_yuito": "デザインやコードのレビュー",
+        "contribution_shihiro": "総合的なレビュー及び監修",
+        "no_sponsor": "まだゴールドスポンサーはいません。",
+        "thank_you_sponsor": "スポンサーになって応援する",
+        "license": "ライセンス",
+        "icon_credit_yuito": "ゆいとさんのアイコンは",
+        "icon_credit_yuito_end": "です。"
+    },
+    "license": {
+        "go_home": "ホームに戻る",
+        "title": "ライセンス",
+        "description": "画像などソースコード以外のコンテンツの場合は以下のライセンスが適応されます",
+        "creative_commons": "クリエイティブ・コモンズ （表示-非営利 4.0 国際）",
+        "source_code_license": "ソースコードの場合は以下のライセンスが適応されます"
+    }
+}

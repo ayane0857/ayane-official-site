@@ -1,0 +1,49 @@
+{
+    "HomePage": {
+        "name": "Ayane",
+        "license": "License",
+        "super_thanks": "Super Thanks",
+        "introduction": "I was born in 2010.\nI do video editing, though not much lately.\nI'm also doing some programming.\nI'm a beginner.\nI have been a member of UniProject since 2024."
+    },
+    "ServiceList": {
+        "ayano-bot-title": "Ayano Bot",
+        "ayano-bot-desc": "Discord Bot is currently under development",
+        "kanata-title": "Kanata Ayaka",
+        "kanata-desc": "Simple sound source composed of single notes",
+        "slideshare-title": "Ayane's SlideShare",
+        "slideshare-desc": "Contains slides I've used in LT sessions and other events",
+        "View-details": "View Details"
+    },
+    "Footer": {
+        "Sitemap": "Sitemap",
+        "Home": "Home",
+        "License": "License",
+        "super_thanks": "Super Thanks",
+        "SNS-links-text": "SNS Links"
+    },
+    "super_thanks": {
+        "go_home": "Return to Home",
+        "title": "Acknowledgments",
+        "description": "Thank you to everyone who helped!!",
+        "contributor": "Contributors",
+        "platinum_sponsor": "Platinum Sponsor",
+        "gold_sponsor": "Gold Sponsor",
+        "icon_alt": "'s icon",
+        "contribution_sa": "Creation of icons and illustrations",
+        "contribution_yune": "Creation of icons and illustrations",
+        "contribution_yuito": "Design and code review",
+        "contribution_shihiro": "Comprehensive review and supervision",
+        "no_sponsor": "There are no Gold Sponsors yet.",
+        "thank_you_sponsor": "Become a sponsor to support",
+        "license": "License",
+        "icon_credit_yuito": "Yuito's icon is from",
+        "icon_credit_yuito_end": "."
+    },
+    "license": {
+        "go_home": "Return to Home",
+        "title": "License",
+        "description": "For content other than source code, such as images, the following license applies",
+        "creative_commons": "Creative Commons (Attribution-NonCommercial 4.0 International)",
+        "source_code_license": "For source code, the following license applies"
+    }
+}

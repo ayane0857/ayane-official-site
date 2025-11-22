@@ -19,6 +19,7 @@
     "lucide-react": "^0.469.0",
     "motion": "^12.23.12",
     "next": "15.4.7",
+    "next-intl": "^4.5.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-icons": "^5.5.0",
@@ -27,12 +28,14 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
+    "@next/codemod": "^16.0.3",
     "@types/node": "^20.19.14",
     "@types/react": "19.0.4",
     "@types/react-dom": "19.0.2",
     "critters": "^0.0.25",
     "eslint": "^9.35.0",
     "eslint-config-next": "15.1.4",
+    "jscodeshift": "^17.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.9.2"

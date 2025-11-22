@@ -2,13 +2,14 @@ import { Suspense } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Card } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 const Skills = dynamic(() =>
   import("@/components/ui/skills").then((mod) => mod.Skills)
 );
 
 const Service = dynamic(() =>
-  import("@/components/service").then((mod) => mod.Service)
+  import("@/components/ui/service").then((mod) => mod.Service)
 );
 
 const ReciprocalLink = dynamic(() =>
@@ -27,7 +28,7 @@ const AnimationIcon = dynamic(
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { MdEmail, MdOutlineTextSnippet } from "react-icons/md";
 
-const skillsList = [
+const SkillsList = [
   { icon: "SiJavascript", text: "JavaScript" },
   { icon: "SiNextdotjs", text: "Next.js" },
   { icon: "SiNodedotjs", text: "Node.js" },
@@ -42,7 +43,21 @@ const skillsList = [
   { icon: "SiAirplayvideo", text: "YMM4" },
 ] as const;
 
+const ReciprocalLinkList = [
+  { name: "Nico", url: "https://ilovejunkpcnico.netlify.app/" },
+  {
+    name: "めろんそ〜だ",
+    url: "https://mellllonsoda.github.io/mellllonsoda-s-page/",
+  },
+  { name: "kaeru", url: "https://www.kaerubasyo.com/" },
+  { name: "ゆいと", url: "https://www.yuito-it.jp/" },
+  { name: "ActiveTK", url: "https://activetk.jp/" },
+  { name: "256server", url: "https://256server.com/" },
+  { name: "しひろ", url: "https://shihiro.com/" },
+] as const;
+
 export default function Home() {
+  const t = useTranslations("HomePage");
   return (
     <div className="bg-[#F9F6F7]">
       <div className="flex flex-col md:flex-row min-h-screen w-full p-4 md:p-8">
@@ -55,7 +70,7 @@ export default function Home() {
               <div className="flex justify-between items-center">
                 <AnimationIcon />
                 <div>
-                  <h2 className="text-3xl font-bold">彩音</h2>
+                  <h1 className="text-3xl font-semibold">{t("name")}</h1>
                   <div className="flex space-x-4 my-2">
                     <a
                       href="https://github.com/ayane0857"
@@ -110,36 +125,25 @@ export default function Home() {
                   <div className="flex items-center space-x-2">
                     <Link
                       className="flex items-center space-x-1 hover:opacity-80 text-base"
-                      href="/license"
+                      href={`/license`}
                     >
                       <MdOutlineTextSnippet className="w-5 h-5" />
-                      <span className="break-all">ライセンス</span>
+                      <span className="break-all">{t("license")}</span>
                     </Link>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Link
                       className="flex items-center space-x-1 hover:opacity-80 text-base"
-                      href="/super_thanks"
+                      href={`/super_thanks`}
                     >
                       <MdOutlineTextSnippet className="w-5 h-5" />
-                      <span className="break-all">謝辞</span>
+                      <span className="break-all">{t("super_thanks")}</span>
                     </Link>
                   </div>
                 </div>
               </div>
-              <p className="text-base leading-relaxed">
-                2010年製の中学生プログラマー兼動画編集者
-                <br />
-                そこらへんにいる階級インフラレッドな人
-                <br />
-                動画投稿してるけど、最近あんまりやってない
-                <br />
-                プログラミングとかやる気があるとやってます
-                <br />
-                めちゃんこ初心者なので手加減してほしいなぁ
-                <br />
-                UniProjectで普段活動している
-                <br />
+              <p className="text-base leading-relaxed break-keep">
+                {t("introduction")}
               </p>
             </div>
           </Card>
@@ -152,10 +156,10 @@ export default function Home() {
           <div className="max-w-4xl w-full mx-auto">
             <Suspense fallback={<div>Loading skills...</div>}>
               <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-                <span className="text-primary">Skills</span>
+                <span className="text-primary font-bold">Skills</span>
               </h1>
               <div className="grid grid-cols-2 mb-8 pb-3 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-                {skillsList.map((skill) => (
+                {SkillsList.map((skill) => (
                   <Skills
                     key={skill.text}
                     icon={skill.icon}
@@ -166,36 +170,25 @@ export default function Home() {
             </Suspense>
             <Suspense fallback={<div>Loading services...</div>}>
               <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-                <span className="text-primary">Provided Services</span>
+                <span className="text-primary font-bold">
+                  Provided Services
+                </span>
               </h1>
               <Service />
             </Suspense>
             <Suspense fallback={<div>Loading links...</div>}>
               <h1 className="text-4xl font-bold mb-8 pb-3 border-b flex items-center gap-2">
-                <span className="text-primary">Reciprocal link</span>
+                <span className="text-primary font-bold">Reciprocal link</span>
               </h1>
               <div className="mb-8 pb-3 gap-4">
-                <ReciprocalLink url="https://ilovejunkpcnico.netlify.app/">
-                  Nicoさん
-                </ReciprocalLink>
-                <ReciprocalLink url="https://mellllonsoda.github.io/mellllonsoda-s-page/">
-                  めろんそ〜ださん
-                </ReciprocalLink>
-                <ReciprocalLink url="https://www.kaerubasyo.com/">
-                  kaeruさん
-                </ReciprocalLink>
-                <ReciprocalLink url="https://www.yuito-it.jp/">
-                  ゆいとさん
-                </ReciprocalLink>
-                <ReciprocalLink url="https://activetk.jp/">
-                  ActiveTKさん
-                </ReciprocalLink>
-                <ReciprocalLink url="https://256server.com/">
-                  256serverさん
-                </ReciprocalLink>
-                <ReciprocalLink url="https://shihiro.com/">
-                  しひろさん
-                </ReciprocalLink>
+                {ReciprocalLinkList.map((reciprocalLink) => (
+                  <ReciprocalLink
+                    key={reciprocalLink.url}
+                    url={reciprocalLink.url}
+                  >
+                    {reciprocalLink.name}
+                  </ReciprocalLink>
+                ))}
               </div>
             </Suspense>
           </div>
