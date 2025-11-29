@@ -1,4 +1,10 @@
 {
+    "metadata": {
+        "title": "ほーむ",
+        "description": "彩音のてきとーなサイトです！",
+        "keywords": "プログラマー, 動画編集者, 中学生, UniProject, 彩音",
+        "sitename": "彩音のてきとーなサイト"
+    },
     "HomePage": {
         "name": "彩音",
         "license": "ライセンス",
@@ -45,11 +51,5 @@
         "description": "画像などソースコード以外のコンテンツの場合は以下のライセンスが適応されます",
         "creative_commons": "クリエイティブ・コモンズ （表示-非営利 4.0 国際）",
         "source_code_license": "ソースコードの場合は以下のライセンスが適応されます"
-    },
-    "metadata": {
-        "title": "ほーむ",
-        "description": "彩音のてきとーなサイトです！",
-        "keywords": "プログラマー, 動画編集者, 中学生, UniProject, 彩音",
-        "sitename": "彩音のてきとーなサイト"
     }
 }
