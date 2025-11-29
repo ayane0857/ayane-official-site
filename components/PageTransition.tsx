@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 interface PageTransitionProps {
   children: ReactNode;
@@ -11,6 +11,18 @@ interface PageTransitionProps {
 export function PageTransition({ children }: PageTransitionProps) {
   const pathname = usePathname();
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // 初回マウント完了後に true
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    // SSR中 / 初回マウント前はアニメーションさせずにそのまま children を返す
+    // → loading.tsx の描画を邪魔しない
+    return <>{children}</>;
+  }
   return (
     <AnimatePresence mode="wait">
       <motion.div
