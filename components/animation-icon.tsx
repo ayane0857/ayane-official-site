@@ -11,7 +11,7 @@ export const Icon = () => {
     <motion.div
       className="w-38 h-38 relative cursor-grab"
       whileHover={{ scale: 1.1, rotate: -10, transition: { duration: 0.3 } }}
-      whileTap={{ scale: 0.9 }}
+      whileTap={{ scale: 0.9, transition: { duration: 0.3 } }}
       transition={{ duration: 0.3, type: "spring", stiffness: 700 }}
       onHoverStart={() => setIsteretere(true)}
       onHoverEnd={() => setIsteretere(false)}
