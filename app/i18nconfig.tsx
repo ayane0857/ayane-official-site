@@ -5,7 +5,8 @@ import { routing } from "./i18nrouting";
 export default getRequestConfig(async () => {
   const headersList = await headers();
   const accept_lang = headersList.get("Accept-Language") || "";
-  const browserLocale = accept_lang.split(",")[0]?.trim(); // e.g. "en-US"
+  const firstTag = accept_lang.split(",")[0]?.trim(); // e.g. "en-US"
+  const browserLocale = firstTag.split(/[-;]/)[0]; // e.g. "en"
 
   // Make sure locale is one of your supported locales
   const locale = routing.locales.includes(
