@@ -3,11 +3,8 @@ import { Zen_Kaku_Gothic_New, M_PLUS_1_Code } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "@/app/globals.css";
 import type { Metadata, Viewport } from "next";
-import dynamic from "next/dynamic";
-import { getLocale } from "next-intl/server";
-const LenisProvider = dynamic(() =>
-  import("@/components/lenis").then((mod) => mod.LenisProvider)
-);
+import { getLocale, getTranslations } from "next-intl/server";
+import { LenisProvider } from "@/components/lenis";
 import ProgressProviders from "@/components/ProgressBarProvider";
 import { PageTransition } from "@/components/PageTransition";
 
@@ -31,26 +28,33 @@ const M_PLUS_1_Code_font = M_PLUS_1_Code({
   adjustFontFallback: true,
 });
 
-export const metadata: Metadata = {
-  title: "ほーむ",
-  description: "あやねのてきとーなさいとのほーむだよ！",
-  keywords: ["プログラマー", "動画編集者", "中学生", "ねむたい", "彩音"],
-  openGraph: {
-    title: "ほーむ",
-    description: "あやねのてきとーなさいとのほーむだよ！",
-    url: "https://ayane0857.net/",
-    siteName: "彩音のてきとーなサイト",
-    locale: "ja",
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "ほーむ",
-    description: "あやねのてきとーなさいとのほーむだよ！",
-    creator: "@ayane0857_",
-    images: ["https://ayane0857.net/icon.png"],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const t = await getTranslations("metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords")
+      .split(", ")
+      .map((k: string) => k.trim()),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: "https://ayane0857.net/",
+      siteName: t("siteName"),
+      locale: locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: t("title"),
+      description: t("description"),
+      creator: "@ayane0857_",
+      images: ["https://ayane0857.net/icon.png"],
+    },
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: "#D58F99",

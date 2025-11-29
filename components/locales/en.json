@@ -45,5 +45,11 @@
         "description": "For content other than source code, such as images, the following license applies",
         "creative_commons": "Creative Commons (Attribution-NonCommercial 4.0 International)",
         "source_code_license": "For source code, the following license applies"
+    },
+    "metadata": {
+        "title": "Ayane Official Site",
+        "description": "Ayane's appropriate site",
+        "keywords": "programmer, video editor, J.H.S. Student, UniProject, Ayane",
+        "sitename": "Ayane Official Site"
     }
 }
