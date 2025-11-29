@@ -9,6 +9,7 @@ const LenisProvider = dynamic(() =>
   import("@/components/lenis").then((mod) => mod.LenisProvider)
 );
 import ProgressProviders from "@/components/ProgressBarProvider";
+import { PageTransition } from "@/components/PageTransition";
 
 const ZenMaru_font = Zen_Kaku_Gothic_New({
   subsets: ["latin"],
@@ -69,7 +70,9 @@ export default async function RootLayout({
         className={`${ZenMaru_font.variable} ${M_PLUS_1_Code_font.variable}`}
       >
         <LenisProvider />
-        <ProgressProviders>{children}</ProgressProviders>
+        <ProgressProviders>
+          <PageTransition>{children}</PageTransition>
+        </ProgressProviders>
         <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
       </body>
     </html>

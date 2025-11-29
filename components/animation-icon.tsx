@@ -1,36 +1,23 @@
 "use client";
 
-import { animate, hover, press } from "motion";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 
 export const Icon = () => {
   const [isteretere, setIsteretere] = useState(false);
-  useEffect(() => {
-    hover(".icon", (element) => {
-      setIsteretere(true);
-      animate(element, { scale: 1.1, rotate: -10 }, { duration: 0.3 });
-
-      return () => {
-        setIsteretere(false);
-        animate(element, { scale: 1, rotate: 0 }, { duration: 0.3 });
-      };
-    });
-    press(".icon", (element) => {
-      setIsteretere(true);
-      animate(element, { scale: 0.9 }, { type: "spring", stiffness: 700 });
-
-      return () => {
-        setTimeout(() => {
-          setIsteretere(false);
-        }, 500);
-        animate(element, { scale: 1 }, { type: "spring", stiffness: 500 });
-      };
-    });
-  }, []);
 
   return (
-    <div className="w-38 h-38 relative cursor-grab icon">
+    <motion.div
+      className="w-38 h-38 relative cursor-grab"
+      whileHover={{ scale: 1.1, rotate: -10, transition: { duration: 0.3 } }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ duration: 0.3, type: "spring", stiffness: 700 }}
+      onHoverStart={() => setIsteretere(true)}
+      onHoverEnd={() => setIsteretere(false)}
+      onTapStart={() => setIsteretere(true)}
+      onTap={() => setTimeout(() => setIsteretere(false), 500)}
+    >
       <Image
         src={isteretere ? "/teretere.png" : "/icon.png"}
         alt="アイコン"
@@ -41,6 +28,6 @@ export const Icon = () => {
         fetchPriority="high"
         quality={85}
       />
-    </div>
+    </motion.div>
   );
 };
