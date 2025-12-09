@@ -18,3 +18,13 @@ spec:
                 name: ayane-official-site
                 port:
                   number: 80
+    - host: d2dqye8zsc74kv.cloudfront.net
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: ayane-official-site
+                port:
+                  number: 80
